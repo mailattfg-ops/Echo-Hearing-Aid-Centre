@@ -1,6 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
     title: string;
@@ -9,6 +8,7 @@ interface SectionHeaderProps {
     badge?: string;
     centered?: boolean;
     dark?: boolean;
+    className?: string; // Standard practice for senior components
 }
 
 export default function SectionHeader({
@@ -18,16 +18,23 @@ export default function SectionHeader({
     badge,
     centered = true,
     dark = false,
+    className,
 }: SectionHeaderProps) {
     return (
-        <div className={`max-w-4xl ${centered ? "mx-auto text-center" : "text-left"} mb-16 space-y-4`}>
+        <div className={cn(
+            "max-w-4xl mb-16 space-y-4",
+            centered ? "mx-auto text-center" : "text-left",
+            className
+        )}>
             {badge && (
                 <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className={`inline-block px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase ${dark ? "bg-white/10 text-white" : "bg-[#FF837E]/10 text-[#FF837E]"
-                        }`}
+                    className={cn(
+                        "inline-block px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase",
+                        dark ? "bg-white/10 text-white" : "bg-secondary/10 text-secondary"
+                    )}
                 >
                     {badge}
                 </motion.span>
@@ -38,14 +45,16 @@ export default function SectionHeader({
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className={`text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight ${dark ? "text-white" : "text-[#5A0D0A]"
-                    }`}
+                className={cn(
+                    "text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight",
+                    dark ? "text-white" : "text-brand-dark"
+                )}
             >
                 {title}
                 {highlightText && (
                     <>
                         {" "}
-                        <span className="text-[#FF837E]">{highlightText}</span>
+                        <span className="text-secondary">{highlightText}</span>
                     </>
                 )}
             </motion.h2>
@@ -56,8 +65,11 @@ export default function SectionHeader({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className={`text-lg md:text-xl font-medium leading-relaxed max-w-2xl ${centered ? "mx-auto" : ""
-                        } ${dark ? "text-white/80" : "text-gray-600"}`}
+                    className={cn(
+                        "text-lg md:text-xl font-medium leading-relaxed max-w-2xl",
+                        centered && "mx-auto",
+                        dark ? "text-white/80" : "text-gray-600"
+                    )}
                 >
                     {subtitle}
                 </motion.p>
@@ -70,8 +82,10 @@ export default function SectionHeader({
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className={`h-1.5 w-24 mx-auto rounded-full ${dark ? "bg-white/20" : "bg-gradient-to-r from-[#5A0D0A] to-[#FF837E]"
-                        } mt-8`}
+                    className={cn(
+                        "h-1.5 w-24 mx-auto rounded-full mt-8",
+                        dark ? "bg-white/20" : "bg-gradient-to-r from-brand-dark to-secondary"
+                    )}
                 />
             )}
         </div>

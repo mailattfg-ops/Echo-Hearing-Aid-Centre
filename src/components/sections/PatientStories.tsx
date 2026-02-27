@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 import { Quote, Music, Users, Briefcase, Heart } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const impacts = [
     {
@@ -45,10 +46,10 @@ const impacts = [
 
 export default function PatientStories() {
     return (
-        <section className="py-12 lg:py-16 bg-[#FDF9F8] relative overflow-hidden">
+        <section className="py-12 lg:py-16 bg-brand-muted relative overflow-hidden">
             {/* Background Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#AD0600]/5 rounded-full -mr-64 -mt-64 blur-[120px]"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#FF837E]/5 rounded-full -ml-64 -mb-64 blur-[120px]"></div>
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full -mr-64 -mt-64 blur-[120px]"></div>
+            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full -ml-64 -mb-64 blur-[120px]"></div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
@@ -73,7 +74,7 @@ export default function PatientStories() {
                             <div className="h-full bg-white/60 backdrop-blur-xl border border-white/50 rounded-[2.5rem] p-8 shadow-xl hover:shadow-2xl hover:bg-white transition-all duration-500 flex flex-col justify-between">
                                 <div className="space-y-6">
                                     <div className="flex justify-between items-start">
-                                        <div className="w-12 h-12 rounded-2xl bg-[#AD0600]/10 flex items-center justify-center text-[#AD0600]">
+                                        <div className="w-12 h-12 rounded-2xl bg-brand-red/10 flex items-center justify-center text-brand-red">
                                             <item.icon size={24} />
                                         </div>
                                         <div className="px-3 py-1 rounded-full bg-gray-100 text-[10px] font-black uppercase tracking-widest text-gray-500">
@@ -82,11 +83,11 @@ export default function PatientStories() {
                                     </div>
 
                                     <div className="space-y-3">
-                                        <h3 className="text-xl font-black text-[#5A0D0A] leading-tight group-hover:text-[#AD0600] transition-colors">
+                                        <h3 className="text-xl font-black text-brand-dark leading-tight group-hover:text-brand-red transition-colors">
                                             {item.title}
                                         </h3>
                                         <div className="relative">
-                                            <Quote className="absolute -top-2 -left-1 text-[#AD0600]/10 w-8 h-8 -z-10" />
+                                            <Quote className="absolute -top-2 -left-1 text-brand-red/10 w-8 h-8 -z-10" />
                                             <p className="text-gray-600 font-medium leading-relaxed italic">
                                                 "{item.content}"
                                             </p>
@@ -95,11 +96,11 @@ export default function PatientStories() {
                                 </div>
 
                                 <div className="mt-8 pt-6 border-t border-gray-100 flex items-center space-x-4">
-                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#AD0600] to-[#5A0D0A] flex items-center justify-center text-white font-bold text-xs">
+                                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-brand-red to-brand-dark flex items-center justify-center text-white font-bold text-xs">
                                         {item.author.split(' ')[0][0]}{item.author.split(' ')[1]?.[0] || ''}
                                     </div>
                                     <div>
-                                        <p className="text-sm font-bold text-[#5A0D0A]">{item.author}</p>
+                                        <p className="text-sm font-bold text-brand-dark">{item.author}</p>
                                         <p className="text-[10px] font-medium text-gray-400 uppercase tracking-wider">{item.role}</p>
                                     </div>
                                 </div>
@@ -111,7 +112,7 @@ export default function PatientStories() {
                                             key={i}
                                             animate={{ height: [4, 12, 6, 16, 4] }}
                                             transition={{ repeat: Infinity, duration: 1, delay: i * 0.1 }}
-                                            className="w-0.5 bg-[#AD0600] rounded-full"
+                                            className="w-0.5 bg-brand-red rounded-full"
                                         ></motion.div>
                                     ))}
                                 </div>

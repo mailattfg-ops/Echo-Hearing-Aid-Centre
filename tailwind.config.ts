@@ -19,9 +19,18 @@ const config: Config = {
           light: "#FFA39F",
           dark: "#FF635D",
         },
+        brand: {
+          red: "#AD0600",
+          dark: "#5A0D0A",
+          muted: "#FDF9F8",
+        },
         base: {
           white: "#FFFFFF",
           gray: "#F8F9FA",
+        },
+        whatsapp: {
+          DEFAULT: "#25D366",
+          dark: "#128C7E",
         },
       },
       fontFamily: {

@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
+import { cn } from "@/lib/utils";
 
 const faqs = [
     {
@@ -36,17 +37,26 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
                 className="w-full py-6 flex items-center justify-between text-left group transition-all"
             >
                 <div className="flex items-center space-x-4">
-                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${isOpen ? 'bg-[#AD0600] text-white' : 'bg-[#AD0600]/5 text-[#AD0600]'}`}>
+                    <div className={cn(
+                        "w-8 h-8 rounded-lg flex items-center justify-center transition-colors",
+                        isOpen ? "bg-brand-red text-white" : "bg-brand-red/5 text-brand-red"
+                    )}>
                         <HelpCircle size={18} />
                     </div>
-                    <span className={`text-lg font-bold transition-colors ${isOpen ? 'text-[#AD0600]' : 'text-[#5A0D0A] group-hover:text-[#AD0600]'}`}>
+                    <span className={cn(
+                        "text-lg font-bold transition-colors",
+                        isOpen ? "text-brand-red" : "text-brand-dark group-hover:text-brand-red"
+                    )}>
                         {question}
                     </span>
                 </div>
                 <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className={`text-[#AD0600] ${isOpen ? 'opacity-100' : 'opacity-40'}`}
+                    className={cn(
+                        "text-brand-red",
+                        isOpen ? "opacity-100" : "opacity-40"
+                    )}
                 >
                     <ChevronDown size={24} />
                 </motion.div>
@@ -103,7 +113,7 @@ export default function FAQ() {
                 <div className="mt-12 text-center">
                     <p className="text-gray-500 font-medium text-sm">
                         Didn't find what you're looking for?
-                        <a href="#contact" className="ml-2 text-[#AD0600] font-black hover:underline tracking-tight">
+                        <a href="#contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
                             Consult our experts directly
                         </a>
                     </p>

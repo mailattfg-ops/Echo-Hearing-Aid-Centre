@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #FDF9F8;
+  @apply bg-brand-muted;
 }
 
 @layer utilities {

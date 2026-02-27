@@ -1,11 +1,11 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
-import ServiceCard from "@/components/ServiceCard";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import ServiceCard from "@/components/common/ServiceCard";
 import { services } from "@/data/company";
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 import { motion } from "framer-motion";
 import { Search, Headset, Calendar } from "lucide-react";
 
@@ -15,7 +15,7 @@ import ConsultationCTA from "@/components/sections/ConsultationCTA";
 
 export default function ServicesPage() {
     return (
-        <div className="min-h-screen bg-[#FDF9F8]">
+        <div className="min-h-screen bg-brand-muted">
             <Navbar />
 
             <PageHero
@@ -24,7 +24,7 @@ export default function ServicesPage() {
             />
 
             {/* Services Grid */}
-            <section className="py-12 lg:py-16 bg-[#FDF9F8]">
+            <section className="py-12 lg:py-16 bg-[brand-muted]">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="What We Do"
@@ -57,7 +57,7 @@ export default function ServicesPage() {
             </section>
 
             {/* Latest Technology Showcase */}
-            <section className="py-12 lg:py-16 bg-[#FDF9F8]">
+            <section className="py-12 lg:py-16 bg-[brand-muted]">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="Innovation"

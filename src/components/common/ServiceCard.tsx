@@ -1,7 +1,10 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import * as LucideIcons from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ServiceCardProps {
     title: string;
@@ -12,6 +15,7 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ title, description, iconName, imageUrl, index }: ServiceCardProps) {
+    const router = useRouter();
     const Icon = (LucideIcons as any)[iconName] || LucideIcons.Activity;
 
     return (
@@ -26,14 +30,16 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
             {/* Image Section */}
             <div className="relative h-64 overflow-hidden">
                 {imageUrl ? (
-                    <img
+                    <Image
                         src={imageUrl}
                         alt={title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                 ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-[#FF837E]/20 to-[#FF837E]/5 flex items-center justify-center">
-                        <div className="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-[#FF837E]">
+                    <div className="w-full h-full bg-gradient-to-br from-secondary/20 to-secondary/5 flex items-center justify-center">
+                        <div className="w-20 h-20 bg-white rounded-3xl shadow-xl flex items-center justify-center text-secondary">
                             <Icon size={40} />
                         </div>
                     </div>
@@ -45,11 +51,11 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
             {/* Content Section */}
             <div className="p-8 flex flex-col flex-grow bg-white">
                 <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-[#FF837E] transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300">
                         {title}
                     </h3>
                     {!imageUrl && (
-                        <div className="w-10 h-10 bg-[#FF837E]/10 rounded-lg flex items-center justify-center text-[#FF837E] transform group-hover:rotate-12 transition-transform">
+                        <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary transform group-hover:rotate-12 transition-transform">
                             <Icon size={20} />
                         </div>
                     )}
@@ -59,15 +65,22 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
                 </p>
                 <a
                     href={`/#contact?service=${encodeURIComponent(title)}`}
-                    className="mt-auto flex items-center text-[#AD0600] font-black group/link uppercase tracking-wider text-xs"
+                    className="mt-auto flex items-center text-brand-red font-black group/link uppercase tracking-wider text-xs"
                     onClick={(e) => {
-                        // Optional: trigger smooth scroll if on same page
+                        e.preventDefault();
+                        const url = `/#contact?service=${encodeURIComponent(title)}`;
+
                         if (window.location.pathname === '/') {
-                            e.preventDefault();
-                            window.history.pushState({}, '', `/#contact?service=${encodeURIComponent(title)}`);
+                            // On home page: Update URL without refresh and scroll
+                            window.history.pushState({}, '', url);
                             const contactSection = document.getElementById('contact');
                             contactSection?.scrollIntoView({ behavior: 'smooth' });
-                            // Trigger the change in dropdown if needed (handled by useEffect in ContactForm)
+
+                            // Dispatch custom event to notify ContactForm
+                            window.dispatchEvent(new Event('popstate'));
+                        } else {
+                            // On other pages: Navigate back to home with params
+                            router.push(url);
                         }
                     }}
                 >
@@ -77,7 +90,7 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
             </div>
 
             {/* Bottom accent bar */}
-            <div className="h-2 w-0 group-hover:w-full bg-[#FF837E] transition-all duration-500"></div>
+            <div className="h-2 w-0 group-hover:w-full bg-secondary transition-all duration-500"></div>
         </motion.div>
     );
 }

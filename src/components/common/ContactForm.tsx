@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { companyDetails, services } from "@/data/company";
 import { Send, CheckCircle2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function ContactFormInner() {
     const searchParams = useSearchParams();
@@ -18,10 +19,19 @@ function ContactFormInner() {
     });
 
     useEffect(() => {
-        const serviceParam = searchParams.get("service");
-        if (serviceParam) {
-            setFormData(prev => ({ ...prev, service: decodeURIComponent(serviceParam) }));
-        }
+        const updateServiceFromQuery = () => {
+            const params = new URLSearchParams(window.location.search);
+            const serviceParam = params.get("service");
+            if (serviceParam) {
+                setFormData(prev => ({ ...prev, service: decodeURIComponent(serviceParam) }));
+            }
+        };
+
+        updateServiceFromQuery();
+
+        // Listen for internal navigation (history.pushState)
+        window.addEventListener('popstate', updateServiceFromQuery);
+        return () => window.removeEventListener('popstate', updateServiceFromQuery);
     }, [searchParams]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -49,26 +59,26 @@ Requirement: ${formData.requirement}`;
         <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-[#5A0D0A]/60 ml-1">Full Name</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Full Name</label>
                     <input
                         type="text"
                         name="name"
                         required
                         placeholder="John Doe"
                         value={formData.name}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-[#AD0600]/20 focus:bg-white focus:ring-4 focus:ring-[#AD0600]/5 outline-none transition-all font-medium text-gray-900"
+                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
                         onChange={handleChange}
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-[#5A0D0A]/60 ml-1">Phone Number</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Phone Number</label>
                     <input
                         type="tel"
                         name="phone"
                         required
                         placeholder="+91 98765 43210"
                         value={formData.phone}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-[#AD0600]/20 focus:bg-white focus:ring-4 focus:ring-[#AD0600]/5 outline-none transition-all font-medium text-gray-900"
+                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
                         onChange={handleChange}
                     />
                 </div>
@@ -76,12 +86,12 @@ Requirement: ${formData.requirement}`;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-[#5A0D0A]/60 ml-1">Location</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Location</label>
                     <select
                         name="location"
                         required
                         value={formData.location}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-[#AD0600]/20 focus:bg-white focus:ring-4 focus:ring-[#AD0600]/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
+                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
                         onChange={handleChange}
                     >
                         <option value="">Select Location</option>
@@ -92,12 +102,12 @@ Requirement: ${formData.requirement}`;
                     </select>
                 </div>
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-[#5A0D0A]/60 ml-1">Service Required</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Service Required</label>
                     <select
                         name="service"
                         required
                         value={formData.service}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-[#AD0600]/20 focus:bg-white focus:ring-4 focus:ring-[#AD0600]/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
+                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
                         onChange={handleChange}
                     >
                         <option value="">Select Service</option>
@@ -111,14 +121,14 @@ Requirement: ${formData.requirement}`;
             </div>
 
             <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-[#5A0D0A]/60 ml-1">Message</label>
+                <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Message</label>
                 <textarea
                     name="requirement"
                     rows={4}
                     required
                     placeholder="Tell us about your hearing needs..."
                     value={formData.requirement}
-                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-[#AD0600]/20 focus:bg-white focus:ring-4 focus:ring-[#AD0600]/5 outline-none transition-all font-medium text-gray-900 resize-none"
+                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 resize-none"
                     onChange={handleChange}
                 ></textarea>
             </div>
@@ -128,7 +138,10 @@ Requirement: ${formData.requirement}`;
                 whileTap={{ scale: 0.99 }}
                 type="submit"
                 disabled={isSubmitted}
-                className={`w-full font-black py-5 rounded-2xl shadow-2xl transition-all flex items-center justify-center space-x-3 text-lg ${isSubmitted ? 'bg-green-600 text-white' : 'bg-[#AD0600] hover:bg-[#5A0D0A] text-white'}`}
+                className={cn(
+                    "w-full font-black py-5 rounded-2xl shadow-2xl transition-all flex items-center justify-center space-x-3 text-lg",
+                    isSubmitted ? 'bg-green-600 text-white' : 'bg-brand-red hover:bg-brand-dark text-white'
+                )}
             >
                 {isSubmitted ? (
                     <>

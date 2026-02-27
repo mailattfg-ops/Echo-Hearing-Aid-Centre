@@ -1,8 +1,8 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import Hero from "@/components/sections/Hero";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ServicesPreview from "@/components/sections/ServicesPreview";

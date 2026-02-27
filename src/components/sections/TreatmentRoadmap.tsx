@@ -1,7 +1,7 @@
 "use client";
 
-import Roadmap from "@/components/Roadmap";
-import SectionHeader from "@/components/SectionHeader";
+import Roadmap from "@/components/common/Roadmap";
+import SectionHeader from "@/components/common/SectionHeader";
 
 export default function TreatmentRoadmap() {
     return (

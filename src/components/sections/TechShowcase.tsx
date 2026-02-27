@@ -62,7 +62,7 @@ const techFeatures = [
 
 export default function TechShowcase() {
     return (
-        <section id="technology" className="py-12 lg:py-16 bg-[#FDF9F8]">
+        <section id="technology" className="py-12 lg:py-16 bg-brand-muted">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {techFeatures.map((tech, index) => (
@@ -72,12 +72,12 @@ export default function TechShowcase() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="group p-8 bg-white rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-[#AD0600]/20 transition-all duration-500"
+                            className="group p-8 bg-white rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand-red/20 transition-all duration-500"
                         >
                             <div className={`w-14 h-14 rounded-2xl ${tech.color} flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-transform duration-300`}>
                                 <tech.icon size={28} />
                             </div>
-                            <h3 className="text-xl font-black text-[#5A0D0A] mb-4 group-hover:text-[#AD0600] transition-colors">
+                            <h3 className="text-xl font-black text-brand-dark mb-4 group-hover:text-brand-red transition-colors">
                                 {tech.title}
                             </h3>
                             <p className="text-gray-600 font-medium leading-relaxed text-sm">

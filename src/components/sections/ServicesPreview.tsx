@@ -2,9 +2,9 @@
 
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import ServiceCard from "@/components/ServiceCard";
+import ServiceCard from "@/components/common/ServiceCard";
 import { services } from "@/data/company";
-import SectionHeader from "@/components/SectionHeader";
+import SectionHeader from "@/components/common/SectionHeader";
 import { motion } from "framer-motion";
 
 export default function ServicesPreview() {
@@ -48,7 +48,7 @@ export default function ServicesPreview() {
                 >
                     <Link
                         href="/services"
-                        className="inline-flex items-center px-10 py-5 bg-[#5A0D0A] text-white font-bold rounded-full hover:bg-[#AD0600] transition-all shadow-xl hover:shadow-[#AD0600]/20 transform hover:-translate-y-1 group"
+                        className="inline-flex items-center px-10 py-5 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-red transition-all shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 group"
                     >
                         <span>View All Services</span>
                         <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />

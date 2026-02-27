@@ -3,12 +3,13 @@
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 export default function ConsultationCTA() {
     return (
         <section className="py-20 lg:py-24 relative overflow-hidden">
             {/* Background Base */}
-            <div className="absolute inset-0 bg-[#5A0D0A]"></div>
+            <div className="absolute inset-0 bg-brand-dark"></div>
 
             {/* Decorative Patterns */}
             <div className="absolute inset-0 opacity-10">
@@ -19,8 +20,8 @@ export default function ConsultationCTA() {
             </div>
 
             {/* Branded Accents */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#AD0600] rounded-full -mr-32 -mt-32 blur-[120px] opacity-40"></div>
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#FF837E] rounded-full -ml-32 -mb-32 blur-[100px] opacity-20"></div>
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-red rounded-full -mr-32 -mt-32 blur-[120px] opacity-40"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary rounded-full -ml-32 -mb-32 blur-[100px] opacity-20"></div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
                 <div className="max-w-4xl mx-auto space-y-10">
@@ -35,7 +36,7 @@ export default function ConsultationCTA() {
                         </span>
                         <h2 className="text-4xl md:text-6xl font-black text-white leading-tight">
                             Ready to Experience <br />
-                            <span className="text-[#FF837E]">Better Hearing?</span>
+                            <span className="text-secondary">Better Hearing?</span>
                         </h2>
                         <p className="text-xl text-white/70 font-medium max-w-2xl mx-auto leading-relaxed">
                             Don't let hearing loss hold you back. Schedule a comprehensive consultation with our certified audiologists today.
@@ -51,7 +52,7 @@ export default function ConsultationCTA() {
                     >
                         <Link
                             href="/#contact"
-                            className="group relative px-10 py-5 bg-white text-[#5A0D0A] rounded-full font-black text-xl shadow-2xl hover:bg-[#FF837E] hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3"
+                            className="group relative px-10 py-5 bg-white text-brand-dark rounded-full font-black text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-3"
                         >
                             <span>Book Consultation</span>
                             <Calendar size={24} className="group-hover:scale-110 transition-transform" />
