@@ -84,16 +84,16 @@ export default function Hero() {
                                     key={i}
                                     initial={{ scale: 0.6, opacity: 0 }}
                                     animate={{
-                                        scale: [0.6, 1.6],
-                                        opacity: [0.4, 0],
+                                        scale: [0.6, 1.8],
+                                        opacity: [0, 0.3, 0],
                                     }}
                                     transition={{
-                                        duration: 5,
+                                        duration: 6,
                                         repeat: Infinity,
-                                        delay: i * 1.6,
+                                        delay: i * 2,
                                         ease: "easeOut"
                                     }}
-                                    className="absolute inset-0 m-auto w-full h-full border-[3px] border-white/40 rounded-full"
+                                    className="absolute inset-0 m-auto w-full h-full border-[2px] border-white/30 rounded-full blur-[1px]"
                                 />
                             ))}
 

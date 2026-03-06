@@ -120,20 +120,37 @@ export default function Footer() {
                 </div>
 
                 {/* Final Copyright */}
-                <div className="mt-12 pt-6 border-t border-brand-dark/10 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-dark/40 order-2 md:order-1">
-                        © {new Date().getFullYear()} {companyDetails.name} — <span className="italic">Elevating Auditory Experiences</span>
-                    </p>
-                    <div className="flex space-x-8 order-1 md:order-2">
+                <div className="mt-12 pt-8 border-t border-brand-dark/10 flex flex-col md:grid md:grid-cols-3 items-center gap-6">
+                    {/* Copyright - Left on Desktop */}
+                    <div className="order-2 md:order-1 text-center md:text-left">
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-dark/40">
+                            © {new Date().getFullYear()} {companyDetails.name}
+                        </p>
+                    </div>
+
+                    {/* Designer Link - Center on Desktop, Last on Mobile */}
+                    <div className="order-3 md:order-2 flex justify-center">
+                        <a
+                            href="https://thinkforgeglobal.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[9px] font-bold text-brand-dark/30 hover:text-brand-red transition-colors flex flex-col md:flex-row items-center group text-center"
+                        >
+                            <span className="uppercase tracking-[0.3em] mb-1 md:mb-0">Designed & Developed by</span>
+                            <span className="md:ml-2 text-brand-dark/60 font-black group-hover:text-brand-red transition-colors">THINK FORGE GLOBAL</span>
+                        </a>
+                    </div>
+
+                    {/* Privacy & Terms - Right on Desktop, First on Mobile */}
+                    <div className="order-1 md:order-3 flex justify-center md:justify-end space-x-8">
                         {['Privacy', 'Terms'].map((text) => (
-                            <Link
+                            <span
                                 key={text}
-                                href={`/${text.toLowerCase()}`}
                                 className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group"
                             >
                                 {text}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-dark/30 group-hover:w-full transition-all duration-500"></span>
-                            </Link>
+                            </span>
                         ))}
                     </div>
                 </div>
