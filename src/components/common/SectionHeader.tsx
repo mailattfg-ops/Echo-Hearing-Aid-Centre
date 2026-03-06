@@ -22,7 +22,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
     return (
         <div className={cn(
-            "max-w-4xl mb-16 space-y-4",
+            "max-w-4xl mb-8 space-y-2",
             centered ? "mx-auto text-center" : "text-left",
             className
         )}>
@@ -54,7 +54,9 @@ export default function SectionHeader({
                 {highlightText && (
                     <>
                         {" "}
-                        <span className="text-secondary">{highlightText}</span>
+                        <span className={cn(
+                            dark ? "text-secondary-light" : "text-brand-red"
+                        )}>{highlightText}</span>
                     </>
                 )}
             </motion.h2>
@@ -83,7 +85,7 @@ export default function SectionHeader({
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className={cn(
-                        "h-1.5 w-24 mx-auto rounded-full mt-8",
+                        "h-1.5 w-24 mx-auto rounded-full mt-4",
                         dark ? "bg-white/20" : "bg-gradient-to-r from-brand-dark to-secondary"
                     )}
                 />

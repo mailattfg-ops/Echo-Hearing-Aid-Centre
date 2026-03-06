@@ -59,7 +59,7 @@ export default function Roadmap() {
     }, [isAutoPlaying, nextStep, lastInteraction]); // Re-run when lastInteraction changes
 
     return (
-        <div className="max-w-4xl mx-auto py-12">
+        <div className="max-w-4xl mx-auto">
             {/* Horizontal Stepper UI */}
             <div className="relative mb-12">
                 {/* Background Connector Bar */}
@@ -131,7 +131,7 @@ export default function Roadmap() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-white rounded-[3rem] p-8 md:p-12 shadow-xl border border-gray-100 relative overflow-hidden group"
+                        className="bg-white rounded-[3rem] p-8 md:p-12 border border-gray-100 relative overflow-hidden group"
                     >
                         {/* Decorative Background Icon */}
                         <div className="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">

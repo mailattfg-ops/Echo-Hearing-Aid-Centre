@@ -1,78 +1,135 @@
 import { motion } from "framer-motion";
-import * as LucideIcons from "lucide-react";
+import {
+    Home,
+    BadgeCheck,
+    Headphones,
+    ArrowRight,
+    Phone,
+    Tag,
+    Sparkles
+} from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
 import { cn } from "@/lib/utils";
 
 const features = [
     {
-        icon: LucideIcons.CalendarDays,
-        title: "Expertise",
-        desc: "Decades of experience in professional audiology with certified experts.",
-        color: "text-brand-red",
-        lightColor: "bg-secondary/10"
+        icon: Home,
+        title: "FREE Home Visit",
+        tagline: "Standard of care",
+        desc: "Professional hearing tests and device trials in the total comfort of your home — at no extra cost.",
+        cta: "Book a Home Visit",
+        ctaHref: "#contact",
+        delay: 0
     },
     {
-        icon: LucideIcons.Zap,
-        title: "Advanced Tech",
-        desc: "State-of-the-art diagnostic and hearing equipment from global leaders.",
-        color: "text-brand-red",
-        lightColor: "bg-secondary/10"
+        icon: Tag,
+        title: "Affordable Pricing",
+        tagline: "Honest & Transparent",
+        desc: "World-class hearing technology starting from just ₹15,000 — zero compromises on quality.",
+        cta: "Starting ₹15,000",
+        ctaHref: "/services#pricing",
+        delay: 0.1
     },
     {
-        icon: LucideIcons.Heart,
-        title: "Personalized Care",
-        desc: "Solutions tailored to your unique lifestyle and hearing preferences.",
-        color: "text-brand-red",
-        lightColor: "bg-secondary/10"
+        icon: Headphones,
+        title: "Expert Audiology",
+        tagline: "Precision Medical Care",
+        desc: "Certified specialists using advanced diagnostic equipment for perfectly tailoed solutions.",
+        cta: "Call Specialist",
+        ctaHref: "tel:+919744474441",
+        delay: 0.2
     },
     {
-        icon: LucideIcons.Award,
+        icon: BadgeCheck,
         title: "Trusted Service",
-        desc: "Reliable follow-ups, maintenance, and lifetime support for your devices.",
-        color: "text-brand-red",
-        lightColor: "bg-secondary/10"
-    },
+        tagline: "Lifetime Support",
+        desc: "Decades of professional excellence backed by a commitment to your long-term hearing health.",
+        cta: "Explore Our Story",
+        ctaHref: "/about",
+        delay: 0.3
+    }
 ];
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-12 lg:py-16 relative overflow-hidden">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-0 left-0 w-64 h-64 bg-gray-50 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-50"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl opacity-30"></div>
+        <section className="py-12 lg:py-16 relative overflow-hidden bg-brand-muted">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
-                    badge="Our Excellence"
-                    title="Why Choose"
-                    highlightText="Echo Hearing?"
-                    subtitle="We combine cutting-edge global technology with empathetic local care to deliver an unparalleled hearing experience."
+                    badge="Excellence in Care"
+                    title="Why Patients"
+                    highlightText="Choose Echo?"
+                    centered
                 />
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-16">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: idx * 0.1 }}
-                            whileHover={{ y: -10 }}
-                            className="group p-8 rounded-[2.5rem] bg-white border border-gray-100 shadow-sm hover:shadow-2xl hover:border-transparent transition-all duration-500 overflow-hidden relative"
+                            transition={{ duration: 0.6, delay: feature.delay }}
+                            viewport={{ once: true }}
+                            className="group relative h-full"
                         >
-                            {/* Card Background Glow */}
-                            <div className="absolute -right-4 -top-4 w-24 h-24 bg-secondary/5 rounded-full group-hover:scale-[3] transition-transform duration-700 blur-2xl"></div>
+                            {/* The Card Body - Semi-solid Premium "Neo-Glass" */}
+                            <div className="relative h-full bg-white rounded-[3rem] border border-black shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 flex flex-col p-8 overflow-hidden">
 
-                            <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500 relative z-10`}>
-                                <div className="w-12 h-12 flex items-center justify-center">
-                                    <feature.icon size={38} className="text-brand-red" />
+                                {/* Background Soundwave-inspired Rings (Hero DNA) */}
+                                <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 pointer-events-none opacity-20 transition-opacity duration-700">
+                                    <div className="w-80 h-80 border-2 border-brand-dark/20 rounded-full"></div>
+                                    <div className="absolute inset-12 border-2 border-brand-dark/15 rounded-full"></div>
+                                    <div className="absolute inset-24 border-2 border-brand-dark/10 rounded-full"></div>
+                                </div>
+
+                                {/* Premium Icon Section */}
+                                <div className="mb-10 relative inline-block">
+                                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center relative z-20 transition-all duration-700 bg-brand-red text-white shadow-xl shadow-brand-red/20 group-hover:scale-110 group-hover:rotate-6">
+                                        <feature.icon size={28} strokeWidth={2} />
+                                    </div>
+                                </div>
+
+                                {/* Typography Section */}
+                                <div className="flex-1 space-y-4 relative z-10">
+                                    <div className="space-y-2">
+                                        <div className="flex items-center gap-2">
+                                            <p className="text-[10px] font-black uppercase tracking-[0.25em] text-brand-red/60">
+                                                {feature.tagline}
+                                            </p>
+                                            <div className="h-[1px] flex-1 bg-brand-red/10"></div>
+                                            <Sparkles size={10} className="text-brand-muted" />
+                                        </div>
+                                        <h3 className="text-2xl font-black text-brand-dark leading-[1.1] tracking-tight group-hover:text-brand-red transition-colors duration-500">
+                                            {feature.title}
+                                        </h3>
+                                    </div>
+
+                                    <p className="text-gray-500 font-medium text-[15px] leading-relaxed pr-2 group-hover:text-gray-600 transition-colors">
+                                        {feature.desc}
+                                    </p>
+                                </div>
+
+                                {/* Pill CTA Section */}
+                                <div className="mt-10 pt-8 border-t border-gray-100 relative z-10">
+                                    <a
+                                        href={feature.ctaHref}
+                                        className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full font-black text-[12px] uppercase tracking-widest transition-all duration-500 relative overflow-hidden bg-brand-dark text-white hover:bg-brand-red shadow-xl hover:shadow-brand-red/30 transform hover:-translate-y-1"
+                                    >
+                                        <span className="relative z-10">{feature.cta}</span>
+                                        {feature.cta.toLowerCase().includes("call")
+                                            ? <Phone size={14} className="relative z-10 transition-transform group-hover/btn:translate-x-1" />
+                                            : <ArrowRight size={14} className="relative z-10 transition-transform group-hover/btn:translate-x-1" />
+                                        }
+                                    </a>
+                                </div>
+
+                                {/* Subtle Excellence Rating */}
+                                <div className="absolute bottom-6 right-8 flex gap-1 opacity-20 pointer-events-none">
+                                    {[...Array(5)].map((_, i) => (
+                                        <div key={i} className="w-1 h-3 bg-brand-red rounded-full"></div>
+                                    ))}
                                 </div>
                             </div>
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-secondary transition-colors relative z-10">{feature.title}</h3>
-                            <p className="text-gray-600 leading-relaxed font-medium relative z-10">
-                                {feature.desc}
-                            </p>
-
-                            <div className="mt-8 overflow-hidden h-1.5 w-0 group-hover:w-full bg-secondary transition-all duration-500 relative z-10 rounded-full"></div>
                         </motion.div>
                     ))}
                 </div>

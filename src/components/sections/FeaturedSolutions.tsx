@@ -12,7 +12,7 @@ const features = [
         title: "Invisible Tech",
         description: "Completely-in-Canal (CIC) models that are virtually undetectable.",
         icon: Zap,
-        image: "/Images/invisbletech.png",
+        image: "/Images/invesiable_tech.webp",
 
     },
     {
@@ -33,7 +33,7 @@ const features = [
 
 export default function FeaturedSolutions() {
     return (
-        <section className="py-12 lg:py-16 bg-brand-muted relative overflow-hidden">
+        <section className="pt-12 lg:pt-16 bg-brand-muted relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
                     badge="Top Recommendations"
@@ -43,7 +43,7 @@ export default function FeaturedSolutions() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
@@ -86,7 +86,7 @@ export default function FeaturedSolutions() {
                                         href={`/#contact?service=${encodeURIComponent(feature.title)}`}
                                         className="inline-flex items-center text-brand-red font-bold text-sm tracking-wide group/link"
                                     >
-                                        <span>Learn More</span>
+                                        <span>Book Free Trial</span>
                                         <ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
                                     </Link>
                                 </div>
@@ -100,7 +100,7 @@ export default function FeaturedSolutions() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-16 text-center"
+                    className="mt-8 text-center"
                 >
                     <Link
                         href="/services#technology"
@@ -111,9 +111,6 @@ export default function FeaturedSolutions() {
                 </motion.div>
             </div>
 
-            {/* Background Accents */}
-            <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-red/5 rounded-full blur-[100px]"></div>
-            <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary/5 rounded-full blur-[100px]"></div>
         </section>
     );
 }

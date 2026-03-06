@@ -5,7 +5,7 @@ import SectionHeader from "@/components/common/SectionHeader";
 
 export default function TreatmentRoadmap() {
     return (
-        <section className="py-12 lg:py-16 overflow-hidden">
+        <section className="pt-8 lg:pt-12 overflow-hidden bg-brand-muted">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeader
                     badge="The Process"

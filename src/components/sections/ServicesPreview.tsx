@@ -9,9 +9,9 @@ import { motion } from "framer-motion";
 
 export default function ServicesPreview() {
     return (
-        <section className="py-12 lg:py-16">
+        <section className="py-6 lg:py-8">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-16 space-y-8">
+                <div className="text-center mb-8 space-y-8">
                     <SectionHeader
                         badge="Our Services"
                         title="Professional"
@@ -21,8 +21,8 @@ export default function ServicesPreview() {
                     />
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {services.slice(0, 4).map((service, index) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {services.slice(0, 3).map((service, index) => (
                         <ServiceCard
                             key={index}
                             index={index}
@@ -44,7 +44,7 @@ export default function ServicesPreview() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-16 text-center"
+                    className="mt-8 text-center"
                 >
                     <Link
                         href="/services"

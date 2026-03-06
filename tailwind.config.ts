@@ -22,7 +22,7 @@ const config: Config = {
         brand: {
           red: "#AD0600",
           dark: "#5A0D0A",
-          muted: "#FDF9F8",
+          muted: "#F9E3E5",
         },
         base: {
           white: "#FFFFFF",

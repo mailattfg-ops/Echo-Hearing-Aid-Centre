@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-start">
                     {/* Column 1: Brand & Logo */}
                     <div className="space-y-6">
-                        <Link href="/" className="inline-block transition-transform duration-500 hover:scale-105">
+                        <Link href="/" className="inline-block transition-transform duration-500">
                             <div className="p-2 inline-block overflow-hidden relative w-48 h-40 md:w-64 md:h-52">
                                 <Image
                                     src="/Images/red bg.png"

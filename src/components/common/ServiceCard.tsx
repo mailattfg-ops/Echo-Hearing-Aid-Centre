@@ -48,49 +48,47 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
 
-            {/* Content Section */}
-            <div className="p-8 flex flex-col flex-grow bg-white">
-                <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300">
+            <div className="p-8 flex-1 flex flex-col justify-between">
+                <div className="space-y-4">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-red/10 flex items-center justify-center text-brand-red">
+                        <Icon size={24} />
+                    </div>
+                    <h3 className="text-2xl font-black text-brand-dark group-hover:text-brand-red transition-colors">
                         {title}
                     </h3>
-                    {!imageUrl && (
-                        <div className="w-10 h-10 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary transform group-hover:rotate-12 transition-transform">
-                            <Icon size={20} />
-                        </div>
-                    )}
+                    <p className="text-gray-600 font-medium leading-relaxed">
+                        {description}
+                    </p>
                 </div>
-                <p className="text-gray-600 leading-relaxed font-medium mb-6">
-                    {description}
-                </p>
-                <a
-                    href={`/#contact?service=${encodeURIComponent(title)}`}
-                    className="mt-auto flex items-center text-brand-red font-black group/link uppercase tracking-wider text-xs"
-                    onClick={(e) => {
-                        e.preventDefault();
-                        const url = `/#contact?service=${encodeURIComponent(title)}`;
 
-                        if (window.location.pathname === '/') {
-                            // On home page: Update URL without refresh and scroll
-                            window.history.pushState({}, '', url);
-                            const contactSection = document.getElementById('contact');
-                            contactSection?.scrollIntoView({ behavior: 'smooth' });
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                    <a
+                        href={`/#contact?service=${encodeURIComponent(title)}`}
+                        className="inline-flex items-center text-brand-red font-bold text-sm tracking-wide group/link"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            const url = `/#contact?service=${encodeURIComponent(title)}`;
 
-                            // Dispatch custom event to notify ContactForm
-                            window.dispatchEvent(new Event('popstate'));
-                        } else {
-                            // On other pages: Navigate back to home with params
-                            router.push(url);
-                        }
-                    }}
-                >
-                    <span className="mr-2">Learn More</span>
-                    <LucideIcons.ArrowRight size={14} className="group-hover/link:translate-x-2 transition-transform" />
-                </a>
+                            if (window.location.pathname === '/') {
+                                // On home page: Update URL without refresh and scroll
+                                window.history.pushState({}, '', url);
+                                const contactSection = document.getElementById('contact');
+                                contactSection?.scrollIntoView({ behavior: 'smooth' });
+
+                                // Dispatch custom event to notify ContactForm
+                                window.dispatchEvent(new Event('popstate'));
+                            } else {
+                                // On other pages: Navigate back to home with params
+                                router.push(url);
+                            }
+                        }}
+                    >
+                        <span>Book Free Trial</span>
+                        <LucideIcons.ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
+                    </a>
+                </div>
             </div>
 
-            {/* Bottom accent bar */}
-            <div className="h-2 w-0 group-hover:w-full bg-secondary transition-all duration-500"></div>
         </motion.div>
     );
 }

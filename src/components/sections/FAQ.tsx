@@ -86,7 +86,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-12 lg:py-16 relative">
+        <section className="pb-12 lg:pb-16 relative">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeader
                     badge="Clarification"
