@@ -1,31 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ServiceCard from "@/components/common/ServiceCard";
 import SectionHeader from "@/components/common/SectionHeader";
-import { Zap, Smartphone, ShieldCheck, BatteryCharging, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 const features = [
     {
         title: "Invisible Tech",
         description: "Completely-in-Canal (CIC) models that are virtually undetectable.",
-        icon: Zap,
+        icon: "Zap",
         image: "/Images/invesiable_tech.webp",
 
     },
     {
         title: "Smart Sync",
         description: "Direct streaming from your smartphone for calls, music, and more.",
-        icon: Smartphone,
+        icon: "Smartphone",
         image: "/Images/sync.webp",
 
     },
     {
         title: "All-Day Power",
         description: "Advanced rechargeable batteries that last from morning to night.",
-        icon: BatteryCharging,
+        icon: "BatteryCharging",
         image: "/Images/All-Day Power.webp",
 
     }
@@ -33,7 +32,7 @@ const features = [
 
 export default function FeaturedSolutions() {
     return (
-        <section className="pt-12 lg:pt-16 bg-brand-muted relative overflow-hidden">
+        <section className="py-6 lg:py-12 bg-brand-muted relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
                     badge="Top Recommendations"
@@ -43,55 +42,16 @@ export default function FeaturedSolutions() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-10 lg:mt-12">
                     {features.map((feature, index) => (
-                        <motion.div
+                        <ServiceCard
                             key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
-                            className="group relative flex flex-col bg-white rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500"
-                        >
-                            {/* Image Section */}
-                            <div className="relative h-64 overflow-hidden">
-                                <Image
-                                    src={feature.image}
-                                    alt={feature.title}
-                                    fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent opacity-60"></div>
-
-                                {/* Tags */}
-
-                            </div>
-
-                            {/* Content Section */}
-                            <div className="p-8 flex-1 flex flex-col justify-between">
-                                <div className="space-y-4">
-                                    <div className="w-12 h-12 rounded-2xl bg-brand-red/10 flex items-center justify-center text-brand-red">
-                                        <feature.icon size={24} />
-                                    </div>
-                                    <h3 className="text-2xl font-black text-brand-dark group-hover:text-brand-red transition-colors">
-                                        {feature.title}
-                                    </h3>
-                                    <p className="text-gray-600 font-medium leading-relaxed">
-                                        {feature.description}
-                                    </p>
-                                </div>
-
-                                <div className="mt-8 pt-6 border-t border-gray-100">
-                                    <Link
-                                        href={`/#contact?service=${encodeURIComponent(feature.title)}`}
-                                        className="inline-flex items-center text-brand-red font-bold text-sm tracking-wide group/link"
-                                    >
-                                        <span>Book Free Trial</span>
-                                        <ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                                    </Link>
-                                </div>
-                            </div>
-                        </motion.div>
+                            index={index}
+                            title={feature.title}
+                            description={feature.description}
+                            iconName={feature.icon}
+                            imageUrl={feature.image}
+                        />
                     ))}
                 </div>
 
@@ -104,9 +64,10 @@ export default function FeaturedSolutions() {
                 >
                     <Link
                         href="/services#technology"
-                        className="inline-flex items-center px-8 py-4 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-red transition-all shadow-xl hover:shadow-brand-dark/20 transform hover:-translate-y-1"
+                        className="inline-flex items-center lg:px-10 lg:py-5 px-3 py-1.5 md:px-6 md:py-3 bg-brand-dark text-white text-xs md:text-base lg:text-lg xl:text-xl font-bold rounded-full hover:bg-brand-red transition-all shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 group space-x-2 md:space-x-3"
                     >
-                        Explore All Technology
+                        <span>Explore All Technology</span>
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </motion.div>
             </div>

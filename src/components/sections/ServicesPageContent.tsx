@@ -21,15 +21,16 @@ export default function ServicesPageContent() {
             />
 
             {/* Services Grid */}
-            <section className="py-6 lg:py-8 bg-brand-muted">
+            <section className="py-6 lg:py-12 bg-brand-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="What We Do"
                         title="Professional"
                         highlightText="Services"
                         subtitle="Comprehensive hearing assessments and advanced technology solutions."
+                        centered={true}
                     />
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-10 lg:mt-12">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -54,7 +55,7 @@ export default function ServicesPageContent() {
             </section>
 
             {/* Latest Technology Showcase */}
-            <section className="py-6 lg:py-8 bg-brand-muted">
+            <section className="py-6 lg:py-12 bg-brand-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="Innovation"

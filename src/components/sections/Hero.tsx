@@ -33,19 +33,19 @@ export default function Hero() {
                         className="space-y-6 md:space-y-8 text-center lg:text-left z-20 order-2 lg:order-1"
                     >
                         <div className="space-y-3 md:space-y-4">
-                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-black text-white leading-[1.1] tracking-tighter">
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[5rem] font-black text-white leading-[1.1] tracking-tighter">
                                 Rediscover <br />
                                 <span className="text-brand-dark">the Joy of Hearing</span>
                             </h1>
-                            <p className="text-lg md:text-2xl text-brand-dark/90 font-bold max-w-xl mx-auto lg:mx-0 leading-tight">
+                            <p className="text-lg lg:text-xl xl:text-2xl text-brand-dark/90 font-bold max-w-xl mx-auto lg:mx-0 leading-tight">
                                 Expert Hearing Solutions Tailored to You
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <div className="flex flex-col sm:flex-row gap-2 xl:gap-4 justify-center lg:justify-start pt-2 xl:pt-4">
                             <button
                                 onClick={() => setIsBookingOpen(true)}
-                                className="inline-block bg-brand-dark hover:bg-brand-red text-white px-10 py-5 rounded-[2rem] font-black text-xl shadow-[0_20px_50px_rgba(173,6,0,0.4)] hover:shadow-brand-red/30 transition-all duration-300 transform hover:-translate-y-1"
+                                className="inline-block bg-brand-dark hover:bg-brand-red text-white px-10 py-5 rounded-[2rem] font-black text-md md:text-lg xl:text-xl shadow-[0_20px_50px_rgba(173,6,0,0.4)] hover:shadow-brand-red/30 transition-all duration-300 transform hover:-translate-y-1"
                             >
                                 Book Hearing Test
                             </button>

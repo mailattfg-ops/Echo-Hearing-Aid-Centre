@@ -167,7 +167,7 @@ export default function Roadmap() {
             </div>
 
             {/* Navigation Helper (Mobile) */}
-            <div className="mt-8 flex justify-center space-x-4 sm:hidden">
+            <div className="mt-4 flex justify-center space-x-4 sm:hidden">
                 <button
                     disabled={activeStep === 0}
                     onClick={() => setActiveStep(prev => prev - 1)}

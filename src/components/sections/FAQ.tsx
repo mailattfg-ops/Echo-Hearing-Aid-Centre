@@ -34,7 +34,7 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
         <div className="border-b border-gray-100 last:border-none">
             <button
                 onClick={onClick}
-                className="w-full py-6 flex items-center justify-between text-left group transition-all"
+                className="w-full py-4 md:py-6 flex items-center justify-between text-left group transition-all"
             >
                 <div className="flex items-center space-x-4">
                     <div className={cn(
@@ -44,7 +44,7 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
                         <HelpCircle size={18} />
                     </div>
                     <span className={cn(
-                        "text-lg font-bold transition-colors",
+                        "text-base md:text-lg font-bold transition-colors",
                         isOpen ? "text-brand-red" : "text-brand-dark group-hover:text-brand-red"
                     )}>
                         {question}
@@ -70,7 +70,7 @@ function AccordionItem({ question, answer, isOpen, onClick }: { question: string
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                     >
-                        <div className="pb-6 pl-12 pr-8">
+                        <div className="pb-6 pl-10 md:pl-12 pr-4 md:pr-8">
                             <p className="text-gray-600 font-medium leading-relaxed">
                                 {answer}
                             </p>
@@ -86,7 +86,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="pb-12 lg:pb-16 relative">
+        <section className="py-6 lg:py-12 relative">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeader
                     badge="Clarification"
@@ -96,7 +96,7 @@ export default function FAQ() {
                     centered
                 />
 
-                <div className="max-w-3xl mx-auto mt-12 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl overflow-hidden p-2 md:p-8">
+                <div className="max-w-3xl mx-auto mt-6 lg:mt-12 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl overflow-hidden p-4 md:p-8">
                     <div className="space-y-2">
                         {faqs.map((faq, idx) => (
                             <AccordionItem
@@ -110,8 +110,8 @@ export default function FAQ() {
                     </div>
                 </div>
 
-                <div className="mt-12 text-center">
-                    <p className="text-gray-500 font-medium text-sm">
+                <div className="mt-6 lg:mt-8 xl:mt-10 text-center">
+                    <p className="text-gray-500 font-medium text-xs lg:text-sm">
                         Didn't find what you're looking for?
                         <a href="#contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
                             Consult our experts directly

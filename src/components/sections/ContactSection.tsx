@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export default function ContactSection() {
     return (
-        <section className="py-12 lg:py-16 relative overflow-hidden bg-brand-muted" id="contact">
+        <section className="py-6 lg:py-12 relative overflow-hidden bg-brand-muted" id="contact">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
                     badge="Get In Touch"
@@ -19,7 +19,7 @@ export default function ContactSection() {
                     centered={true}
                 />
 
-                <div className="grid lg:grid-cols-12 gap-12 items-stretch mt-12">
+                <div className="grid lg:grid-cols-12 gap-4 md:gap-8 lg:gap-12 items-stretch mt-8 md:mt-10 lg:mt-12">
 
                     {/* Left Side: Contact Info & Map */}
                     <div className="lg:col-span-5 flex flex-col space-y-6">

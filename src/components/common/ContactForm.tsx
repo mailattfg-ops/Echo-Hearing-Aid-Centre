@@ -66,7 +66,7 @@ Requirement: ${formData.requirement}`;
                         required
                         placeholder="John Doe"
                         value={formData.name}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
+                        className="w-full px-5 py-3 md:py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
                         onChange={handleChange}
                     />
                 </div>
@@ -78,7 +78,7 @@ Requirement: ${formData.requirement}`;
                         required
                         placeholder="+91 98765 43210"
                         value={formData.phone}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
+                        className="w-full px-5 py-3 md:py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900"
                         onChange={handleChange}
                     />
                 </div>
@@ -91,7 +91,7 @@ Requirement: ${formData.requirement}`;
                         name="location"
                         required
                         value={formData.location}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
+                        className="w-full px-5 py-3 md:py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
                         onChange={handleChange}
                     >
                         <option value="">Select Location</option>
@@ -107,7 +107,7 @@ Requirement: ${formData.requirement}`;
                         name="service"
                         required
                         value={formData.service}
-                        className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
+                        className="w-full px-5 py-3 md:py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 appearance-none cursor-pointer"
                         onChange={handleChange}
                     >
                         <option value="">Select Service</option>
@@ -128,7 +128,7 @@ Requirement: ${formData.requirement}`;
                     required
                     placeholder="Tell us about your hearing needs..."
                     value={formData.requirement}
-                    className="w-full px-5 py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 resize-none"
+                    className="w-full px-5 py-3 md:py-4 rounded-2xl bg-gray-50 border border-transparent focus:border-brand-red/20 focus:bg-white focus:ring-4 focus:ring-brand-red/5 outline-none transition-all font-medium text-gray-900 resize-none"
                     onChange={handleChange}
                 ></textarea>
             </div>
@@ -139,7 +139,7 @@ Requirement: ${formData.requirement}`;
                 type="submit"
                 disabled={isSubmitted}
                 className={cn(
-                    "w-full font-black py-5 rounded-2xl shadow-2xl transition-all flex items-center justify-center space-x-3 text-lg",
+                    "w-full font-black py-3.5 md:py-5 rounded-2xl shadow-2xl transition-all flex items-center justify-center space-x-3 text-base md:text-lg",
                     isSubmitted ? 'bg-green-600 text-white' : 'bg-brand-red hover:bg-brand-dark text-white'
                 )}
             >

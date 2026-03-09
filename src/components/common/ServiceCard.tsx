@@ -48,20 +48,20 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
 
-            <div className="p-8 flex-1 flex flex-col justify-between">
-                <div className="space-y-4">
+            <div className="p-6 md:p-8 flex-1 flex flex-col justify-between">
+                <div className="space-y-2 md:space-y-3">
                     <div className="w-12 h-12 rounded-2xl bg-brand-red/10 flex items-center justify-center text-brand-red">
                         <Icon size={24} />
                     </div>
-                    <h3 className="text-2xl font-black text-brand-dark group-hover:text-brand-red transition-colors">
+                    <h3 className="text-xl md:text-2xl font-black text-brand-dark group-hover:text-brand-red transition-colors">
                         {title}
                     </h3>
-                    <p className="text-gray-600 font-medium leading-relaxed">
+                    <p className="text-gray-600 text-sm md:text-lg font-medium leading-relaxed">
                         {description}
                     </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-100">
+                <div className="mt-4 pt-4 border-t border-gray-100">
                     <a
                         href={`/#contact?service=${encodeURIComponent(title)}`}
                         className="inline-flex items-center text-brand-red font-bold text-sm tracking-wide group/link"

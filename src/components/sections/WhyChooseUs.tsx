@@ -52,7 +52,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-12 lg:py-16 relative overflow-hidden bg-brand-muted">
+        <section className="py-6 lg:py-12 relative overflow-hidden bg-brand-muted">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-8 mt-8 md:mt-10 lg:mt-12 xl:mt-16">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
@@ -83,7 +83,7 @@ export default function WhyChooseUs() {
                                 </div>
 
                                 {/* Premium Icon Section */}
-                                <div className="mb-10 relative inline-block">
+                                <div className="mb-6 md:mb-8 xl:mb-10 relative inline-block">
                                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center relative z-20 transition-all duration-700 bg-brand-red text-white shadow-xl shadow-brand-red/20 group-hover:scale-110 group-hover:rotate-6">
                                         <feature.icon size={28} strokeWidth={2} />
                                     </div>
@@ -110,7 +110,7 @@ export default function WhyChooseUs() {
                                 </div>
 
                                 {/* Pill CTA Section */}
-                                <div className="mt-10 pt-8 border-t border-gray-100 relative z-10">
+                                <div className="mt-4 pt-4 border-t border-gray-100 relative z-10">
                                     <a
                                         href={feature.ctaHref}
                                         className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full font-black text-[12px] uppercase tracking-widest transition-all duration-500 relative overflow-hidden bg-brand-dark text-white hover:bg-brand-red shadow-xl hover:shadow-brand-red/30 transform hover:-translate-y-1"

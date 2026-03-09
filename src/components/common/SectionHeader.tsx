@@ -22,7 +22,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
     return (
         <div className={cn(
-            "max-w-4xl mb-8 space-y-2",
+            "max-w-4xl mb-2 md:mb-4 lg:mb-6 xl:mb-8 space-y-2",
             centered ? "mx-auto text-center" : "text-left",
             className
         )}>
@@ -32,7 +32,7 @@ export default function SectionHeader({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className={cn(
-                        "inline-block px-4 py-1.5 rounded-full text-sm font-bold tracking-wider uppercase",
+                        "inline-block px-4 py-1.5 rounded-full text-xs md:text-sm font-bold tracking-wider uppercase",
                         dark ? "bg-white/10 text-white" : "bg-secondary/10 text-secondary"
                     )}
                 >
@@ -46,7 +46,7 @@ export default function SectionHeader({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className={cn(
-                    "text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight",
+                    "text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black",
                     dark ? "text-white" : "text-brand-dark"
                 )}
             >
@@ -68,7 +68,7 @@ export default function SectionHeader({
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className={cn(
-                        "text-lg md:text-xl font-medium leading-relaxed max-w-2xl",
+                        "text-sm md:text-base lg:text-lg xl:text-xl font-medium leading-relaxed max-w-2xl",
                         centered && "mx-auto",
                         dark ? "text-white/80" : "text-gray-600"
                     )}

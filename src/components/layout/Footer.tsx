@@ -11,35 +11,9 @@ export default function Footer() {
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-red/10 rounded-full -ml-24 -mb-24 blur-[100px]"></div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 items-start">
-                    {/* Column 1: Brand & Logo */}
-                    <div className="space-y-6">
-                        <Link href="/" className="inline-block transition-transform duration-500">
-                            <div className="p-2 inline-block overflow-hidden relative w-48 h-40 md:w-64 md:h-52">
-                                <Image
-                                    src="/Images/red bg.png"
-                                    alt="Echo Hearing Logo"
-                                    fill
-                                    sizes="(max-width: 768px) 192px, 256px"
-                                    className="object-contain relative z-10"
-                                />
-                            </div>
-                        </Link>
-                        <div className="flex space-x-4">
-                            {[Instagram, Facebook, Youtube].map((Icon, idx) => (
-                                <a
-                                    key={idx}
-                                    href="#"
-                                    className="w-10 h-10 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all duration-500 border border-white/20 text-brand-dark shadow-sm hover:shadow-brand-dark/20 hover:-translate-y-1"
-                                >
-                                    <Icon size={18} strokeWidth={2.5} />
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* Column 2: Navigation */}
-                    <div className="space-y-6">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 items-stretch">
+                    {/* Column 2: Navigation - Moved to first row on mobile */}
+                    <div className="space-y-6 lg:order-2">
                         <div className="space-y-1.5">
                             <h4 className="text-sm font-black uppercase tracking-[0.2em] text-brand-dark/70">Explore</h4>
                             <div className="h-1 w-8 bg-brand-dark/20 rounded-full"></div>
@@ -59,8 +33,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3: Expertise */}
-                    <div className="space-y-6">
+                    {/* Column 3: Expertise - Moved to first row on mobile */}
+                    <div className="space-y-6 lg:order-3">
                         <div className="space-y-1.5">
                             <h4 className="text-sm font-black uppercase tracking-[0.2em] text-brand-dark/70">Services</h4>
                             <div className="h-1 w-8 bg-brand-dark/20 rounded-full"></div>
@@ -81,13 +55,13 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 4: Get in Touch */}
-                    <div className="space-y-6">
+                    {/* Column 4: Get in Touch - Second row on mobile */}
+                    <div className="space-y-6 lg:order-4 flex flex-col">
                         <div className="space-y-1.5">
                             <h4 className="text-sm font-black uppercase tracking-[0.2em] text-brand-dark/70">Contact</h4>
                             <div className="h-1 w-8 bg-brand-dark/20 rounded-full"></div>
                         </div>
-                        <div className="space-y-4">
+                        <div className="space-y-4 flex-grow flex flex-col justify-end">
                             <div className="flex items-start space-x-4">
                                 <div className="w-10 h-10 bg-brand-dark/5 rounded-xl flex items-center justify-center shrink-0 text-brand-dark">
                                     <MapPin size={18} strokeWidth={2.5} />
@@ -115,6 +89,32 @@ export default function Footer() {
                                     <p className="text-xs font-black text-brand-dark break-all">{companyDetails.email}</p>
                                 </div>
                             </a>
+                        </div>
+                    </div>
+
+                    {/* Column 1: Brand & Logo - Placed in "empty" spot in 2x2 grid on mobile */}
+                    <div className="lg:order-1 lg:pr-8 flex flex-col justify-between">
+                        <Link href="/" className="inline-block transition-transform duration-500">
+                            <div className="inline-block overflow-hidden relative w-36 h-36 md:w-64 md:h-40">
+                                <Image
+                                    src="/Images/red bg.png"
+                                    alt="Echo Hearing Logo"
+                                    fill
+                                    sizes="(max-width: 768px) 128px, 256px"
+                                    className="object-contain object-left relative z-10"
+                                />
+                            </div>
+                        </Link>
+                        <div className="flex space-x-3 md:space-x-4">
+                            {[Instagram, Facebook, Youtube].map((Icon, idx) => (
+                                <a
+                                    key={idx}
+                                    href="#"
+                                    className="w-9 h-9 md:w-10 md:h-10 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all duration-500 border border-white/20 text-brand-dark shadow-sm hover:shadow-brand-dark/20 hover:-translate-y-1"
+                                >
+                                    <Icon className="w-4 h-4 md:w-[18px] md:h-[18px]" strokeWidth={2.5} />
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>

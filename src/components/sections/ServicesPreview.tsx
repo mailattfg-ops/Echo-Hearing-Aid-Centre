@@ -9,19 +9,17 @@ import { motion } from "framer-motion";
 
 export default function ServicesPreview() {
     return (
-        <section className="py-6 lg:py-8">
+        <section className="py-6 lg:py-12">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="text-center mb-8 space-y-8">
-                    <SectionHeader
-                        badge="Our Services"
-                        title="Professional"
-                        highlightText="Hearing Care"
-                        subtitle="Comprehensive hearing solutions tailored for a life full of sound and connection."
-                        centered={true}
-                    />
-                </div>
+                <SectionHeader
+                    badge="Our Services"
+                    title="Professional"
+                    highlightText="Hearing Care"
+                    subtitle="Comprehensive hearing solutions tailored for a life full of sound and connection."
+                    centered={true}
+                />
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-10 lg:mt-12">
                     {services.slice(0, 3).map((service, index) => (
                         <ServiceCard
                             key={index}
@@ -48,10 +46,10 @@ export default function ServicesPreview() {
                 >
                     <Link
                         href="/services"
-                        className="inline-flex items-center px-10 py-5 bg-brand-dark text-white font-bold rounded-full hover:bg-brand-red transition-all shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 group"
+                        className="inline-flex items-center lg:px-10 lg:py-5 px-3 py-1.5 md:px-6 md:py-3 bg-brand-dark text-white text-xs md:text-base lg:text-lg xl:text-xl font-bold rounded-full hover:bg-brand-red transition-all shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 group space-x-2 md:space-x-3"
                     >
                         <span>View All Services</span>
-                        <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </motion.div>
             </div>

@@ -12,7 +12,7 @@ interface PageHeroProps {
 
 export default function PageHero({ title, subtitle }: PageHeroProps) {
     return (
-        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-secondary pt-32 pb-20">
+        <section className="relative min-h-[40vh] md:min-h-[50vh] flex items-center justify-center overflow-hidden bg-secondary pt-24 pb-12 md:pt-32 md:pb-20">
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/Images/ear-banner.jpg"
@@ -28,7 +28,7 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/20 rounded-full -ml-48 -mb-48 blur-3xl opacity-30 z-0"></div>
 
             <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-                <div className="max-w-4xl mx-auto space-y-8">
+                <div className="max-w-4xl mx-auto space-y-4 lg:space-y-8">
                     {/* Back Link */}
                     <motion.div
                         initial={{ opacity: 0, y: -10 }}
@@ -50,13 +50,13 @@ export default function PageHero({ title, subtitle }: PageHeroProps) {
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8 }}
-                        className="space-y-6"
+                        className="space-y-2 lg:space-y-3"
                     >
-                        <h1 className="text-5xl md:text-8xl font-black text-brand-dark leading-[1.1] tracking-tight drop-shadow-2xl">
+                        <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-brand-dark leading-[1.1] tracking-tight drop-shadow-2xl">
                             {title}
                         </h1>
                         <div className="w-24 h-1.5 bg-white/30 mx-auto rounded-full"></div>
-                        <p className="text-xl md:text-2xl text-white/80 font-bold max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl lg:text-2xl text-white/80 font-bold max-w-md md:max-w-lg lg:max-w-xl mx-auto leading-relaxed">
                             {subtitle}
                         </p>
                     </motion.div>
