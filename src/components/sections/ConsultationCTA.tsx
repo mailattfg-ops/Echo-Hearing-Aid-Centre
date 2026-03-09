@@ -52,7 +52,7 @@ export default function ConsultationCTA() {
                     >
                         <Link
                             href="/#contact"
-                            className="group relative lg:px-10 lg:py-5 px-3 py-1.5 md:px-6 md:py-3 bg-white text-brand-dark rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
+                            className="group relative lg:px-10 lg:py-5 px-5 py-2.5 md:px-6 md:py-3 bg-white text-brand-dark rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
                         >
                             <span>Book Consultation</span>
                             <Calendar size={20} className="group-hover:scale-110 transition-transform" />
@@ -61,7 +61,7 @@ export default function ConsultationCTA() {
                         <Link
                             href="https://wa.me/918073059436"
                             target="_blank"
-                            className="lg:px-10 lg:py-5 px-3 py-1.5 md:px-6 md:py-3 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
+                            className="lg:px-10 lg:py-5 px-5 py-2.5 md:px-6 md:py-3 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
                         >
                             <MessageSquare size={20} />
                             <span>WhatsApp Us</span>

@@ -25,7 +25,7 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
             whileHover={{ y: -10 }}
-            className="group bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-500 flex flex-col h-full"
+            className="group bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-2xl border border-gray-100 transition-all duration-500 flex flex-col h-full will-change-transform backface-hidden"
         >
             {/* Image Section */}
             <div className="relative h-64 overflow-hidden">

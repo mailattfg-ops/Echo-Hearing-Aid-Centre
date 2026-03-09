@@ -62,7 +62,7 @@ export default function WhyChooseUs() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 xl:gap-8 mt-8 md:mt-10 lg:mt-12 xl:mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12 xl:mt-16">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                             className="group relative h-full"
                         >
                             {/* The Card Body - Semi-solid Premium "Neo-Glass" */}
-                            <div className="relative h-full bg-white rounded-[3rem] border border-black shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 flex flex-col p-8 overflow-hidden">
+                            <div className="relative h-full bg-white rounded-[2.5rem] md:rounded-[3rem] border border-black shadow-[0_15px_50px_-15px_rgba(0,0,0,0.08)] transition-all duration-700 flex flex-col p-6 xl:p-7 2xl:p-8 overflow-hidden">
 
                                 {/* Background Soundwave-inspired Rings (Hero DNA) */}
                                 <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 pointer-events-none opacity-20 transition-opacity duration-700">
@@ -83,8 +83,8 @@ export default function WhyChooseUs() {
                                 </div>
 
                                 {/* Premium Icon Section */}
-                                <div className="mb-6 md:mb-8 xl:mb-10 relative inline-block">
-                                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center relative z-20 transition-all duration-700 bg-brand-red text-white shadow-xl shadow-brand-red/20 group-hover:scale-110 group-hover:rotate-6">
+                                <div className="mb-6 md:mb-8 relative inline-block">
+                                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl flex items-center justify-center relative z-20 transition-all duration-700 bg-brand-red text-white shadow-xl shadow-brand-red/20 group-hover:scale-110 group-hover:rotate-6">
                                         <feature.icon size={28} strokeWidth={2} />
                                     </div>
                                 </div>
@@ -99,21 +99,21 @@ export default function WhyChooseUs() {
                                             <div className="h-[1px] flex-1 bg-brand-red/10"></div>
                                             <Sparkles size={10} className="text-brand-muted" />
                                         </div>
-                                        <h3 className="text-2xl font-black text-brand-dark leading-[1.1] tracking-tight group-hover:text-brand-red transition-colors duration-500">
+                                        <h3 className="text-xl xl:text-[22px] 2xl:text-2xl font-black text-brand-dark leading-[1.1] tracking-tight group-hover:text-brand-red transition-colors duration-500">
                                             {feature.title}
                                         </h3>
                                     </div>
 
-                                    <p className="text-gray-500 font-medium text-[15px] leading-relaxed pr-2 group-hover:text-gray-600 transition-colors">
+                                    <p className="text-gray-500 font-medium text-sm xl:text-[15px] leading-relaxed pr-2 group-hover:text-gray-600 transition-colors">
                                         {feature.desc}
                                     </p>
                                 </div>
 
                                 {/* Pill CTA Section */}
-                                <div className="mt-4 pt-4 border-t border-gray-100 relative z-10">
+                                <div className="mt-4 pt-4 lg:mt-2 lg:pt-2 xl:mt-4 xl:pt-4 border-t border-gray-100 relative z-10">
                                     <a
                                         href={feature.ctaHref}
-                                        className="group/btn inline-flex items-center gap-3 px-8 py-4 rounded-full font-black text-[12px] uppercase tracking-widest transition-all duration-500 relative overflow-hidden bg-brand-dark text-white hover:bg-brand-red shadow-xl hover:shadow-brand-red/30 transform hover:-translate-y-1"
+                                        className="group/btn inline-flex items-center gap-2 px-6 py-3 lg:px-4 xl:px-5 xl:py-2.5 2xl:px-8 2xl:py-4 rounded-full font-black text-[11px] lg:text-[8px] xl:text-[10px] 2xl:text-[12px] uppercase tracking-widest transition-all duration-500 relative overflow-hidden bg-brand-dark text-white hover:bg-brand-red shadow-xl hover:shadow-brand-red/30 transform hover:-translate-y-1"
                                     >
                                         <span className="relative z-10">{feature.cta}</span>
                                         {feature.cta.toLowerCase().includes("call")
