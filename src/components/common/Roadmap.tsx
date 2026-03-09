@@ -39,7 +39,11 @@ export default function Roadmap() {
     const [activeStep, setActiveStep] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
     // Track timer locally to reset it on click
-    const [lastInteraction, setLastInteraction] = useState(Date.now());
+    const [lastInteraction, setLastInteraction] = useState<number | null>(null);
+
+    useEffect(() => {
+        setLastInteraction(Date.now());
+    }, []);
 
     const nextStep = useCallback(() => {
         setActiveStep((prev) => (prev + 1) % steps.length);
@@ -52,11 +56,11 @@ export default function Roadmap() {
 
     useEffect(() => {
         let interval: NodeJS.Timeout;
-        if (isAutoPlaying) {
+        if (isAutoPlaying && lastInteraction !== null) {
             interval = setInterval(nextStep, AUTO_PLAY_INTERVAL);
         }
         return () => clearInterval(interval);
-    }, [isAutoPlaying, nextStep, lastInteraction]); // Re-run when lastInteraction changes
+    }, [isAutoPlaying, nextStep, lastInteraction]);
 
     return (
         <div className="max-w-4xl mx-auto">
@@ -123,7 +127,7 @@ export default function Roadmap() {
             </div>
 
             {/* Interactive Content Card */}
-            <div className="min-h-[220px]">
+            <div className="min-h-[180px]">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={activeStep}
@@ -131,7 +135,7 @@ export default function Roadmap() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="bg-white rounded-[3rem] p-8 md:p-12 border border-gray-100 relative overflow-hidden group"
+                        className="bg-white rounded-[3rem] p-6 md:p-10 border border-gray-100 relative overflow-hidden group"
                     >
                         {/* Decorative Background Icon */}
                         <div className="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.05] transition-opacity">
@@ -141,23 +145,23 @@ export default function Roadmap() {
                             })()}
                         </div>
 
-                        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
-                            <div className="w-20 h-20 rounded-3xl bg-brand-red/5 flex items-center justify-center text-brand-red shrink-0">
+                        <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-[2rem] bg-brand-red/5 flex items-center justify-center text-brand-red shrink-0">
                                 {(() => {
                                     const Icon = steps[activeStep].icon;
-                                    return <Icon size={40} />;
+                                    return <Icon size={32} className="md:w-10 md:h-10" />;
                                 })()}
                             </div>
-                            <div className="space-y-3">
+                            <div className="space-y-2 md:space-y-3">
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                                     <span className="px-3 py-1 rounded-full bg-brand-red/10 text-brand-red text-[10px] font-black uppercase tracking-[0.1em] whitespace-nowrap">
                                         Step 0{activeStep + 1}
                                     </span>
-                                    <h3 className="text-3xl font-black text-brand-dark leading-none mb-0">
+                                    <h3 className="text-2xl md:text-3xl font-black text-brand-dark leading-none mb-0">
                                         {steps[activeStep].title}
                                     </h3>
                                 </div>
-                                <p className="text-gray-600 text-lg font-medium leading-relaxed max-w-2xl">
+                                <p className="text-gray-600 text-sm md:text-lg font-medium leading-relaxed max-w-2xl">
                                     {steps[activeStep].description}
                                 </p>
                             </div>
