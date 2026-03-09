@@ -44,7 +44,7 @@ export default function ServicesPageContent() {
                                             index === 2 ? "/Images/Fitting and Programming.webp" :
                                                 index === 3 ? "/Images/Invisible and Rechargeable.webp" :
                                                     index === 4 ? "/Images/Repair and service.webp" :
-                                                        index === 5 ? "/Images/Ear Moulds and Accessories.webp" :
+                                                        index === 5 ? "/Images/custome_ear.webp" :
                                                             index === 6 ? "/Images/Home Visit.webp" :
                                                                 index === 7 ? "/Images/Follow-ups.webp" : undefined
                                 }

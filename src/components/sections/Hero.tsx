@@ -42,7 +42,7 @@ export default function Hero() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-2 xl:gap-4 justify-center lg:justify-start pt-2 xl:pt-4">
+                        <div className="flex flex-col sm:flex-row gap-2 xl:gap-4 justify-center lg:justify-start">
                             <button
                                 onClick={() => setIsBookingOpen(true)}
                                 className="inline-block bg-brand-dark hover:bg-brand-red text-white px-10 py-5 rounded-[2rem] font-black text-md md:text-lg xl:text-xl shadow-[0_20px_50px_rgba(173,6,0,0.4)] hover:shadow-brand-red/30 transition-all duration-300 transform hover:-translate-y-1"

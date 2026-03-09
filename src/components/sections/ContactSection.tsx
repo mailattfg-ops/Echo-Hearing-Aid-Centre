@@ -67,31 +67,35 @@ export default function ContactSection() {
                             ))}
                         </div>
 
-                        {/* Map Placeholder / Visual */}
+                        {/* Live Google Map */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="flex-grow min-h-[300px] rounded-[3.5rem] bg-white border border-gray-100 shadow-sm relative overflow-hidden group"
+                            className="flex-grow min-h-[400px] lg:min-h-0 rounded-[3.5rem] bg-white border border-gray-100 shadow-sm relative overflow-hidden group"
                         >
-                            <div className="absolute inset-0 bg-brand-red/5 flex items-center justify-center">
-                                <MapPin size={48} className="text-brand-red/20 animate-bounce" />
-                            </div>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.001943517989!2d76.34241817450872!3d10.016697272748242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080db871fe3933%3A0xa4da7fff7953c060!2sHEAR%20ONE%20Hearing%20Aid%20Centre!5e0!3m2!1sen!2sin!4v1773048642276!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                className="absolute inset-0"
+                            ></iframe>
 
-                            {/* Decorative Grid Pattern */}
-                            <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(var(--brand-red) 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-
-                            <div className="absolute bottom-6 left-6 right-6 p-6 rounded-3xl bg-white/90 backdrop-blur-md border border-white shadow-xl flex items-center justify-between">
+                            <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white shadow-xl flex items-center justify-between pointer-events-none sm:pointer-events-auto">
                                 <div className="pr-4">
                                     <h5 className="font-black text-brand-dark uppercase tracking-widest text-[10px] mb-1">Clinic Locations</h5>
-                                    <p className="text-gray-900 font-bold text-sm leading-tight">Visit us at Kakkanad or Aluva centres</p>
+                                    <p className="text-gray-900 font-bold text-xs sm:text-sm leading-tight italic">Hear One Hearing Aid Centre</p>
                                 </div>
                                 <a
-                                    href={`https://www.google.com/maps/search/?api=1&query=Echo+Hearing+Aid+Centre+Kakkanad`}
+                                    href="https://maps.app.goo.gl/M4F1M7mF7q7zJ1p79"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-12 h-12 bg-brand-red text-white rounded-2xl flex items-center justify-center hover:bg-brand-dark transition-colors shadow-lg shrink-0"
+                                    className="w-10 h-10 bg-brand-red text-white rounded-xl flex items-center justify-center hover:bg-brand-dark transition-colors shadow-lg shrink-0"
                                 >
-                                    <ExternalLink size={20} />
+                                    <ExternalLink size={18} />
                                 </a>
                             </div>
                         </motion.div>

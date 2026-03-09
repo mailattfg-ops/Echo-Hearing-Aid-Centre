@@ -27,7 +27,7 @@ const features = [
         tagline: "Honest & Transparent",
         desc: "World-class hearing technology starting from just ₹15,000 — zero compromises on quality.",
         cta: "Starting ₹15,000",
-        ctaHref: "/services#pricing",
+        ctaHref: "#contact",
         delay: 0.1
     },
     {
