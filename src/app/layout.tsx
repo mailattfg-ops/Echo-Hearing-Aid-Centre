@@ -117,7 +117,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             </head>
-            <body className={`${inter.className} antialiased`}>
+            <body className={`${inter.className} antialiased`} suppressHydrationWarning>
                 {children}
             </body>
         </html>

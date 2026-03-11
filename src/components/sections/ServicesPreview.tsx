@@ -15,7 +15,7 @@ export default function ServicesPreview() {
                     badge="Our Services"
                     title="Professional"
                     highlightText="Hearing Care"
-                    subtitle="Comprehensive hearing solutions tailored for a life full of sound and connection."
+                    subtitle="Comprehensive hearing care solutions expertly tailored for a vibrant life full of sound."
                     centered={true}
                 />
 

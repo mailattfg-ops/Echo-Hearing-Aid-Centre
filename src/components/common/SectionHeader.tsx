@@ -22,7 +22,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
     return (
         <div className={cn(
-            "max-w-4xl mb-2 md:mb-4 lg:mb-6 xl:mb-8 space-y-1",
+            "max-w-4xl mb-2 md:mb-4 lg:mb-6 xl:mb-8 space-y-2",
             centered ? "mx-auto text-center" : "text-left",
             className
         )}>
@@ -68,7 +68,7 @@ export default function SectionHeader({
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className={cn(
-                        "text-sm md:text-base lg:text-lg xl:text-xl font-medium leading-relaxed max-w-2xl",
+                        "text-sm md:text-base lg:text-lg xl:text-xl font-medium leading-relaxed max-w-xl",
                         centered && "mx-auto",
                         dark ? "text-white/80" : "text-gray-600"
                     )}

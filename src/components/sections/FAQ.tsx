@@ -93,11 +93,11 @@ export default function FAQ() {
                     badge="Clarification"
                     title="Essential"
                     highlightText="Queries"
-                    subtitle="Find quick answers to the most common questions about professional hearing care and our services."
+                    subtitle="Find quick, clear answers to common questions about professional hearing care and services."
                     centered
                 />
 
-                <div className="max-w-3xl mx-auto mt-6 lg:mt-12 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl overflow-hidden p-4 md:p-8">
+                <div className="max-w-3xl mx-auto mt-6 md:mt-10 lg:mt-12 bg-white rounded-[2.5rem] border border-gray-100 shadow-xl overflow-hidden p-4 md:p-8">
                     <div className="space-y-2">
                         {faqs.map((faq, idx) => (
                             <AccordionItem

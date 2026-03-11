@@ -15,7 +15,7 @@ export default function ContactSection() {
                     badge="Get In Touch"
                     title="Let's Start Your"
                     highlightText="Hearing Journey"
-                    subtitle="Expert care is just a message away. Reach out to our specialists today."
+                    subtitle="Expert hearing care is just a message away. Reach out to specialists today."
                     centered={true}
                 />
 

@@ -35,10 +35,10 @@ export default function Hero() {
                         <div className="space-y-3 md:space-y-4">
                             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[5rem] font-black text-white leading-[1.1] tracking-tighter">
                                 Rediscover <br />
-                                <span className="text-brand-dark">the Joy of Hearing</span>
+                                <span className="text-brand-dark">The Joy Of Hearing</span>
                             </h1>
                             <p className="text-lg lg:text-xl xl:text-2xl text-brand-dark/90 font-bold max-w-xl mx-auto lg:mx-0 leading-tight">
-                                Expert Hearing Solutions Tailored to You
+                                Expert Hearing Solutions Tailored To You
                             </p>
                         </div>
 

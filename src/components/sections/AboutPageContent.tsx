@@ -26,7 +26,7 @@ export default function AboutPageContent() {
                         badge="Our Purpose"
                         title="Mission &"
                         highlightText="Vision"
-                        subtitle="Defining our commitment to excellence in hearing healthcare."
+                        subtitle="Defining our unwavering commitment to absolute excellence in modern hearing healthcare."
                         centered={true}
                     />
                     <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mt-8 md:mt-10 lg:mt-12">
@@ -70,7 +70,7 @@ export default function AboutPageContent() {
                         badge="Our History"
                         title="The Echo"
                         highlightText="Journey"
-                        subtitle="How we became a trusted leader in professional audiology."
+                        subtitle="Discover exactly how we became a trusted regional leader in professional audiology."
                         centered={true}
                     />
                     <div className="max-w-4xl mx-auto mt-8 md:mt-10 lg:mt-12">
@@ -96,7 +96,7 @@ export default function AboutPageContent() {
                         badge="What We Stand For"
                         title="Our Core"
                         highlightText="Values"
-                        subtitle="The principles that guide every patient interaction and clinical decision."
+                        subtitle="The vital principles guiding every patient interaction and professional clinical decision we make."
                         centered={true}
                     />
                     <div className="grid md:grid-cols-3 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 text-center mt-8 md:mt-10 lg:mt-12">

@@ -11,7 +11,7 @@ export default function TreatmentRoadmap() {
                     badge="The Process"
                     title="Your Road to"
                     highlightText="Better Hearing"
-                    subtitle="A simple, four-step journey to rediscovering the sounds you love."
+                    subtitle="A simple, four-step journey to perfectly restore the beautiful sounds you love."
                 />
                 <Roadmap />
             </div>

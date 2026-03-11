@@ -60,10 +60,11 @@ export default function WhyChooseUs() {
                     badge="Excellence in Care"
                     title="Why Patients"
                     highlightText="Choose Echo?"
+                    subtitle="Experience world-class audiology with our dedicated specialists and premium hearing solutions."
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12 xl:mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}

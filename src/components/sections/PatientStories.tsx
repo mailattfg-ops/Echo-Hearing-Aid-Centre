@@ -56,7 +56,7 @@ export default function PatientStories() {
                     badge="Sound Impact"
                     title="Wall of Positive"
                     highlightText="Impact"
-                    subtitle="Real stories of how professional hearing care transforms daily life into something extraordinary."
+                    subtitle="Real stories of how professional hearing care transforms daily life into something truly extraordinary."
                     centered
                 />
 

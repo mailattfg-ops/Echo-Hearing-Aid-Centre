@@ -77,7 +77,7 @@ export default function Roadmap() {
                     transition={{ duration: 0.5 }}
                 />
 
-                <div className="relative flex justify-between items-center z-10 px-2 md:px-0">
+                <div className="relative flex justify-between items-center z-10 px-2 md:px-0 mt-8 md:mt-10 lg:mt-12">
                     {steps.map((step, index) => {
                         const isActive = activeStep === index;
                         const isCompleted = index < activeStep;

@@ -38,7 +38,7 @@ export default function FeaturedSolutions() {
                     badge="Top Recommendations"
                     title="Featured Hearing"
                     highlightText="Solutions"
-                    subtitle="Explore our most advanced technology selected for exceptional performance and comfort."
+                    subtitle="Explore our most advanced technology, carefully chosen for exceptional daily performance and comfort."
                     centered
                 />
 
