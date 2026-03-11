@@ -32,7 +32,7 @@ const features = [
 
 export default function FeaturedSolutions() {
     return (
-        <section className="py-6 lg:py-12 bg-brand-muted relative overflow-hidden">
+        <section className="py-6 lg:py-8 xl:py-12 bg-brand-muted relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
                     badge="Top Recommendations"
@@ -42,7 +42,7 @@ export default function FeaturedSolutions() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-10 lg:mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12">
                     {features.map((feature, index) => (
                         <ServiceCard
                             key={index}

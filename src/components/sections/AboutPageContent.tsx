@@ -20,7 +20,7 @@ export default function AboutPageContent() {
             />
 
             {/* Mission & Vision */}
-            <section className="py-6 lg:py-12 bg-brand-muted">
+            <section className="py-6 lg:py-8 xl:py-12 bg-brand-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="Our Purpose"
@@ -64,7 +64,7 @@ export default function AboutPageContent() {
             </section>
 
             {/* Company Story */}
-            <section className="py-6 lg:py-12 shadow-sm">
+            <section className="py-6 lg:py-8 xl:py-12 shadow-sm">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="Our History"
@@ -90,7 +90,7 @@ export default function AboutPageContent() {
             </section>
 
             {/* Values Section */}
-            <section className="py-6 lg:py-12 bg-brand-muted">
+            <section className="py-6 lg:py-8 xl:py-12 bg-brand-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="What We Stand For"
@@ -99,7 +99,7 @@ export default function AboutPageContent() {
                         subtitle="The principles that guide every patient interaction and clinical decision."
                         centered={true}
                     />
-                    <div className="grid md:grid-cols-3 gap-8 text-center mt-8 md:mt-10 lg:mt-12">
+                    <div className="grid md:grid-cols-3 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 text-center mt-8 md:mt-10 lg:mt-12">
                         {[
                             { icon: Target, title: "Precision", desc: "We use laboratory-grade equipment for unmatched accuracy." },
                             { icon: Award, title: "Excellence", desc: "We strive for the highest quality in every assessment." },

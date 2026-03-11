@@ -142,7 +142,7 @@ export default function Hero() {
                 </div>
 
                 <div className="bg-brand-muted pb-6 md:pb-10 pt-2">
-                    <div className="container mx-auto px-4">
+                    <div className="container mx-auto px-4 md:px-6">
                         <div className="flex flex-col items-center space-y-4">
                             {/* "In Partnership With" title with decorative lines */}
                             <div className="flex items-center justify-center w-full gap-4 md:gap-8 opacity-40 mb-2 px-4">

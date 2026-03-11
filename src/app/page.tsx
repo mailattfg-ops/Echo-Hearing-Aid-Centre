@@ -7,7 +7,6 @@ import Hero from "@/components/sections/Hero";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import ServicesPreview from "@/components/sections/ServicesPreview";
 import TreatmentRoadmap from "@/components/sections/TreatmentRoadmap";
-import FeaturedSolutions from "@/components/sections/FeaturedSolutions";
 import FAQ from "@/components/sections/FAQ";
 import ContactSection from "@/components/sections/ContactSection";
 
@@ -20,10 +19,7 @@ export default function Home() {
             <WhyChooseUs />
             <ServicesPreview />
             <TreatmentRoadmap />
-            <FeaturedSolutions />
-            <ContactSection />
             <FAQ />
-
             <Footer />
             <WhatsAppButton />
         </div>

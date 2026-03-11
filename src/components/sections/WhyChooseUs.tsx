@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
 import { cn } from "@/lib/utils";
+import { companyDetails } from "@/data/company";
 
 const features = [
     {
@@ -18,7 +19,7 @@ const features = [
         tagline: "Standard of care",
         desc: "Professional hearing tests and device trials in the total comfort of your home — at no extra cost.",
         cta: "Book a Home Visit",
-        ctaHref: "#contact",
+        ctaHref: "/contact#contact",
         delay: 0
     },
     {
@@ -27,7 +28,7 @@ const features = [
         tagline: "Honest & Transparent",
         desc: "World-class hearing technology starting from just ₹15,000 — zero compromises on quality.",
         cta: "Starting ₹15,000",
-        ctaHref: "#contact",
+        ctaHref: `https://wa.me/91${companyDetails.whatsapp}?text=Hi%20Echo%20Hearing%20Care,%20I'm%20interested%20in%20knowing%20more%20about%20your%20hearing%20devices%20starting%20from%20%E2%82%B915,000.%20Could%20you%20share%20some%20details?`,
         delay: 0.1
     },
     {
@@ -36,7 +37,7 @@ const features = [
         tagline: "Precision Medical Care",
         desc: "Certified specialists using advanced diagnostic equipment for perfectly tailoed solutions.",
         cta: "Call Specialist",
-        ctaHref: "tel:+919744474441",
+        ctaHref: `tel:+91${companyDetails.whatsapp}`,
         delay: 0.2
     },
     {
@@ -52,7 +53,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-6 lg:py-12 relative overflow-hidden bg-brand-muted">
+        <section className="py-6 lg:py-8 xl:py-12 relative overflow-hidden bg-brand-muted">
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
@@ -113,6 +114,8 @@ export default function WhyChooseUs() {
                                 <div className="mt-4 pt-4 lg:mt-2 lg:pt-2 xl:mt-4 xl:pt-4 border-t border-gray-100 relative z-10">
                                     <a
                                         href={feature.ctaHref}
+                                        target={feature.ctaHref.startsWith("http") ? "_blank" : undefined}
+                                        rel={feature.ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
                                         className="group/btn inline-flex items-center gap-2 px-6 py-3 lg:px-4 xl:px-5 xl:py-2.5 2xl:px-8 2xl:py-4 rounded-full font-black text-[11px] lg:text-[8px] xl:text-[10px] 2xl:text-[12px] uppercase tracking-widest transition-all duration-500 relative overflow-hidden bg-brand-dark text-white hover:bg-brand-red shadow-xl hover:shadow-brand-red/30 transform hover:-translate-y-1"
                                     >
                                         <span className="relative z-10">{feature.cta}</span>

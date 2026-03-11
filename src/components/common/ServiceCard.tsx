@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import * as LucideIcons from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import BookingModal from "@/components/ui/BookingModal";
 
 interface ServiceCardProps {
     title: string;
@@ -17,6 +19,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ title, description, iconName, imageUrl, index }: ServiceCardProps) {
     const router = useRouter();
     const Icon = (LucideIcons as any)[iconName] || LucideIcons.Activity;
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     return (
         <motion.div
@@ -62,32 +65,20 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-gray-100">
-                    <a
-                        href={`/#contact?service=${encodeURIComponent(title)}`}
+                    <button
                         className="inline-flex items-center text-brand-red font-bold text-sm tracking-wide group/link"
                         onClick={(e) => {
                             e.preventDefault();
-                            const url = `/#contact?service=${encodeURIComponent(title)}`;
-
-                            if (window.location.pathname === '/') {
-                                // On home page: Update URL without refresh and scroll
-                                window.history.pushState({}, '', url);
-                                const contactSection = document.getElementById('contact');
-                                contactSection?.scrollIntoView({ behavior: 'smooth' });
-
-                                // Dispatch custom event to notify ContactForm
-                                window.dispatchEvent(new Event('popstate'));
-                            } else {
-                                // On other pages: Navigate back to home with params
-                                router.push(url);
-                            }
+                            setIsBookingOpen(true);
                         }}
                     >
                         <span>Book Free Trial</span>
                         <LucideIcons.ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
-                    </a>
+                    </button>
                 </div>
             </div>
+
+            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
 
         </motion.div>
     );

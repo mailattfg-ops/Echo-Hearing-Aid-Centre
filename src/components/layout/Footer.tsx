@@ -120,16 +120,21 @@ export default function Footer() {
                 </div>
 
                 {/* Final Copyright */}
-                <div className="mt-12 pt-8 border-t border-brand-dark/10 flex flex-col md:grid md:grid-cols-3 items-center gap-6">
-                    {/* Copyright - Left on Desktop */}
-                    <div className="order-2 md:order-1 text-center md:text-left">
+                <div className="mt-4 pt-4 lg:mt-12 lg:pt-8 border-t border-brand-dark/10 flex flex-col md:flex-row items-center justify-between gap-2 lg:gap-6">
+                    {/* Copyright & Terms */}
+                    <div className="order-2 md:order-1 text-center md:text-left flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                         <p className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-dark/40">
                             © {new Date().getFullYear()} {companyDetails.name}
                         </p>
+                        <span className="hidden sm:inline-block text-brand-dark/20 text-[10px]">|</span>
+                        <span className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group cursor-pointer pt-2 sm:pt-0">
+                            Terms & Conditions
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-dark/30 group-hover:w-full transition-all duration-500"></span>
+                        </span>
                     </div>
 
-                    {/* Designer Link - Center on Desktop, Last on Mobile */}
-                    <div className="order-3 md:order-2 flex justify-center">
+                    {/* Designer Link */}
+                    <div className="order-3 md:order-2 flex justify-center md:justify-end">
                         <a
                             href="https://thinkforgeglobal.com/"
                             target="_blank"
@@ -139,19 +144,6 @@ export default function Footer() {
                             <span className="uppercase tracking-[0.3em] mb-1 md:mb-0">Designed & Developed by</span>
                             <span className="md:ml-2 text-brand-dark/60 font-black group-hover:text-brand-red transition-colors">THINK FORGE GLOBAL</span>
                         </a>
-                    </div>
-
-                    {/* Privacy & Terms - Right on Desktop, First on Mobile */}
-                    <div className="order-1 md:order-3 flex justify-center md:justify-end space-x-8">
-                        {['Privacy', 'Terms'].map((text) => (
-                            <span
-                                key={text}
-                                className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group"
-                            >
-                                {text}
-                                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-dark/30 group-hover:w-full transition-all duration-500"></span>
-                            </span>
-                        ))}
                     </div>
                 </div>
             </div>

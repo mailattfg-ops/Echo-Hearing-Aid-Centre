@@ -7,7 +7,6 @@ import ServiceCard from "@/components/common/ServiceCard";
 import { services } from "@/data/company";
 import SectionHeader from "@/components/common/SectionHeader";
 import PageHero from "@/components/sections/PageHero";
-import TechShowcase from "@/components/sections/TechShowcase";
 import ConsultationCTA from "@/components/sections/ConsultationCTA";
 
 export default function ServicesPageContent() {
@@ -21,7 +20,7 @@ export default function ServicesPageContent() {
             />
 
             {/* Services Grid */}
-            <section className="py-6 lg:py-12 bg-brand-muted">
+            <section className="py-6 lg:py-8 xl:py-12 bg-brand-muted">
                 <div className="container mx-auto px-4 md:px-6">
                     <SectionHeader
                         badge="What We Do"
@@ -30,7 +29,7 @@ export default function ServicesPageContent() {
                         subtitle="Comprehensive hearing assessments and advanced technology solutions."
                         centered={true}
                     />
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 md:mt-10 lg:mt-12">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12">
                         {services.map((service, index) => (
                             <ServiceCard
                                 key={index}
@@ -51,20 +50,6 @@ export default function ServicesPageContent() {
                             />
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Latest Technology Showcase */}
-            <section className="py-6 lg:py-12 bg-brand-muted">
-                <div className="container mx-auto px-4 md:px-6">
-                    <SectionHeader
-                        badge="Innovation"
-                        title="Latest Hearing"
-                        highlightText="Technology"
-                        subtitle="Explore the groundbreaking features that define modern hearing care excellence."
-                        centered={true}
-                    />
-                    <TechShowcase />
                 </div>
             </section>
 

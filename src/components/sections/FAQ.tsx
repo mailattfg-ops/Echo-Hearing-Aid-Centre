@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { ChevronDown, HelpCircle } from "lucide-react";
 import SectionHeader from "@/components/common/SectionHeader";
 import { cn } from "@/lib/utils";
@@ -86,7 +87,7 @@ export default function FAQ() {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
-        <section className="py-6 lg:py-12 relative">
+        <section className="py-6 lg:py-8 xl:py-12 relative">
             <div className="container mx-auto px-4 md:px-6">
                 <SectionHeader
                     badge="Clarification"
@@ -113,9 +114,9 @@ export default function FAQ() {
                 <div className="mt-6 lg:mt-8 xl:mt-10 text-center">
                     <p className="text-gray-500 font-medium text-xs lg:text-sm">
                         Didn't find what you're looking for?
-                        <a href="#contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
+                        <Link href="/contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
                             Consult our experts directly
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>

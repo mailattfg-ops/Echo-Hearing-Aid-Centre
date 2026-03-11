@@ -22,7 +22,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
     return (
         <div className={cn(
-            "max-w-4xl mb-2 md:mb-4 lg:mb-6 xl:mb-8 space-y-2",
+            "max-w-4xl mb-2 md:mb-4 lg:mb-6 xl:mb-8 space-y-1",
             centered ? "mx-auto text-center" : "text-left",
             className
         )}>

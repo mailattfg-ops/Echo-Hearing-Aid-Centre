@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 import { Calendar, ArrowRight, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { companyDetails } from "@/data/company";
 import { cn } from "@/lib/utils";
 
 export default function ConsultationCTA() {
     return (
-        <section className="py-8 lg:py-12 relative overflow-hidden">
+        <section className="py-6 lg:py-8 xl:py-12 relative overflow-hidden">
             {/* Background Base */}
             <div className="absolute inset-0 bg-brand-dark"></div>
 
@@ -48,23 +49,23 @@ export default function ConsultationCTA() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="flex flex-row items-center justify-center gap-4 lg:gap-6"
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto"
                     >
                         <Link
-                            href="/#contact"
-                            className="group relative lg:px-10 lg:py-5 px-5 py-2.5 md:px-6 md:py-3 bg-white text-brand-dark rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
+                            href="/contact"
+                            className="group relative w-full sm:w-auto justify-center lg:px-10 lg:py-5 px-5 py-3 md:px-6 md:py-3 bg-white text-brand-dark rounded-full font-bold text-sm md:text-base lg:text-lg xl:text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
                         >
-                            <span>Book Consultation</span>
+                            <span className="whitespace-nowrap">Book Consultation</span>
                             <Calendar size={20} className="group-hover:scale-110 transition-transform" />
                         </Link>
 
                         <Link
-                            href="https://wa.me/918073059436"
+                            href={`https://wa.me/91${companyDetails.whatsapp}`}
                             target="_blank"
-                            className="lg:px-10 lg:py-5 px-5 py-2.5 md:px-6 md:py-3 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-xs md:text-base lg:text-lg xl:text-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
+                            className="w-full sm:w-auto justify-center lg:px-10 lg:py-5 px-5 py-3 md:px-6 md:py-3 bg-transparent border-2 border-white/30 text-white rounded-full font-bold text-sm md:text-base lg:text-lg xl:text-xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
                         >
                             <MessageSquare size={20} />
-                            <span>WhatsApp Us</span>
+                            <span className="whitespace-nowrap">WhatsApp Us</span>
                         </Link>
                     </motion.div>
 
@@ -74,21 +75,21 @@ export default function ConsultationCTA() {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.4 }}
-                        className="pt-4 md:pt-6 lg:pt-8 flex flex-wrap items-center justify-center gap-x-4 md:gap-x-8 gap-y-2 text-white/40 text-[10px] md:text-sm font-bold uppercase tracking-widest"
+                        className="pt-4 md:pt-6 lg:pt-8 flex flex-row flex-wrap items-center justify-center gap-y-2 gap-x-3 sm:gap-x-4 md:gap-x-8 text-white/40 text-[9px] sm:text-[10px] md:text-sm font-bold uppercase tracking-widest"
                     >
-                        <div className="flex items-center space-x-1.5 md:space-x-2">
-                            <ArrowRight size={12} className="md:size-[14px]" />
-                            <span>Expert Care</span>
+                        <div className="flex items-center space-x-1 md:space-x-2">
+                            <ArrowRight size={10} className="sm:size-3 md:size-[14px]" />
+                            <span className="whitespace-nowrap">Expert Care</span>
                         </div>
-                        <div className="h-1 w-1 bg-white/20 rounded-full hidden md:block"></div>
-                        <div className="flex items-center space-x-1.5 md:space-x-2">
-                            <ArrowRight size={12} className="md:size-[14px]" />
-                            <span>Latest Tech</span>
+                        <div className="h-1 w-1 bg-white/20 rounded-full hidden sm:block"></div>
+                        <div className="flex items-center space-x-1 md:space-x-2">
+                            <ArrowRight size={10} className="sm:size-3 md:size-[14px]" />
+                            <span className="whitespace-nowrap">Latest Tech</span>
                         </div>
-                        <div className="h-1 w-1 bg-white/20 rounded-full hidden md:block"></div>
-                        <div className="flex items-center space-x-1.5 md:space-x-2">
-                            <ArrowRight size={12} className="md:size-[14px]" />
-                            <span>Lifetime Support</span>
+                        <div className="h-1 w-1 bg-white/20 rounded-full hidden sm:block"></div>
+                        <div className="flex items-center space-x-1 md:space-x-2">
+                            <ArrowRight size={10} className="sm:size-3 md:size-[14px]" />
+                            <span className="whitespace-nowrap">Lifetime Support</span>
                         </div>
                     </motion.div>
                 </div>

@@ -46,7 +46,7 @@ const impacts = [
 
 export default function PatientStories() {
     return (
-        <section className="py-12 lg:py-16 bg-brand-muted relative overflow-hidden">
+        <section className="py-6 lg:py-8 xl:py-12 bg-brand-muted relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-red/5 rounded-full -mr-64 -mt-64 blur-[120px]"></div>
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full -ml-64 -mb-64 blur-[120px]"></div>
@@ -60,7 +60,7 @@ export default function PatientStories() {
                     centered
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12">
                     {impacts.map((item, index) => (
                         <motion.div
                             key={index}

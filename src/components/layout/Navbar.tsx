@@ -67,12 +67,12 @@ export default function Navbar() {
                     <div className="flex items-center space-x-4 ml-auto">
                         <a
                             href={`tel:${companyDetails.whatsapp}`}
-                            className="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white px-4 py-1.5 md:px-5 md:py-2 rounded-2xl flex items-center space-x-2.5 transition-all border border-white/10"
+                            className="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white px-6 py-2.5 rounded-full flex items-center space-x-2.5 transition-all border border-white/10"
                         >
-                            <div className="bg-white rounded-full p-1.5 text-brand-red">
-                                <Phone size={14} fill="currentColor" />
+                            <div className="bg-white rounded-full p-1 text-brand-red flex-shrink-0 flex items-center justify-center">
+                                <Phone size={12} fill="currentColor" />
                             </div>
-                            <span className="font-bold text-sm md:text-base tracking-wide hidden sm:inline">{companyDetails.whatsapp}</span>
+                            <span className="font-black text-[11px] uppercase tracking-[0.2em] hidden sm:inline">{companyDetails.whatsapp}</span>
                         </a>
 
                         {/* Mobile Menu Toggle */}

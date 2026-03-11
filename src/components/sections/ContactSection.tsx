@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 
 export default function ContactSection() {
     return (
-        <section className="py-6 lg:py-12 relative overflow-hidden bg-brand-muted" id="contact">
+        <section className="py-6 lg:py-8 xl:py-12 relative overflow-hidden bg-brand-muted" id="contact">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <SectionHeader
                     badge="Get In Touch"
