@@ -17,6 +17,7 @@ export default function ServicesPageContent() {
             <PageHero
                 title="Our Services"
                 subtitle="Comprehensive hearing care solutions tailored to your lifestyle and needs."
+                backgroundImage="/Images/service_11zon.webp"
             />
 
             {/* Services Grid */}

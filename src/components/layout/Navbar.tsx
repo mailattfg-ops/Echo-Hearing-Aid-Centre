@@ -36,7 +36,7 @@ export default function Navbar() {
                         </Link>
 
                         {/* Desktop Nav Links */}
-                        <ul className="hidden lg:flex items-center space-x-2">
+                        <ul className="hidden lg:flex items-center gap-1">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href;
                                 return (
@@ -44,7 +44,7 @@ export default function Navbar() {
                                         <Link
                                             href={link.href}
                                             className={cn(
-                                                "relative px-6 py-2.5 font-black text-[11px] uppercase tracking-[0.2em] transition-colors duration-300 flex items-center justify-center",
+                                                "relative w-[140px] py-3 font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center rounded-full group",
                                                 isActive ? "text-brand-red" : "text-white/70 hover:text-white"
                                             )}
                                         >
@@ -52,7 +52,7 @@ export default function Navbar() {
                                             {isActive && (
                                                 <motion.div
                                                     layoutId="nav-pill"
-                                                    className="absolute inset-0 bg-secondary/100 rounded-full shadow-lg z-0"
+                                                    className="absolute inset-0 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.15)] z-0"
                                                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                                 />
                                             )}

@@ -17,6 +17,7 @@ export default function AboutPageContent() {
             <PageHero
                 title="About Us"
                 subtitle="Committed to improving lives through better hearing since day one."
+                backgroundImage="/Images/about_11zon.webp"
             />
 
             {/* Mission & Vision */}
