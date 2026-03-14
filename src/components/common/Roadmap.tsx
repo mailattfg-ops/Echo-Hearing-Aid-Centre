@@ -1,7 +1,16 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import * as LucideIcons from "lucide-react";
+import { 
+    Activity, 
+    Search, 
+    Headset, 
+    Settings, 
+    Heart, 
+    ChevronLeft, 
+    ChevronRight 
+} from "lucide-react";
+
 import { useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
@@ -9,27 +18,27 @@ const steps = [
     {
         title: "Hearing Test",
         description: "A comprehensive diagnostic evaluation using state-of-the-art equipment to define your hearing profile.",
-        icon: LucideIcons.Activity,
+        icon: Activity,
     },
     {
         title: "Expert Analysis",
         description: "Your results are analyzed by specialists, providing a clear explanation of your hearing health.",
-        icon: LucideIcons.Search,
+        icon: Search,
     },
     {
         title: "Tech Trial",
         description: "Experience the difference with a hands-on trial of our premium, high-tech hearing aids.",
-        icon: LucideIcons.Headset,
+        icon: Headset,
     },
     {
         title: "Precision Fitting",
         description: "Advanced programming and fitting to ensure maximum comfort and optimized performance.",
-        icon: LucideIcons.Settings,
+        icon: Settings,
     },
     {
         title: "Lifetime Care",
         description: "Continuous follow-ups and dedicated support to ensure your journey is always exceptional.",
-        icon: LucideIcons.Heart,
+        icon: Heart,
     },
 ];
 
@@ -180,7 +189,7 @@ export default function Roadmap() {
                     aria-label="Previous step"
                     className="p-3 rounded-full bg-white border border-gray-100 text-brand-red disabled:opacity-30"
                 >
-                    <LucideIcons.ChevronLeft size={24} />
+                    <ChevronLeft size={24} />
                 </button>
                 <button
                     disabled={activeStep === steps.length - 1}
@@ -188,7 +197,7 @@ export default function Roadmap() {
                     aria-label="Next step"
                     className="p-3 rounded-full bg-white border border-gray-100 text-brand-red disabled:opacity-30"
                 >
-                    <LucideIcons.ChevronRight size={24} />
+                    <ChevronRight size={24} />
                 </button>
             </div>
         </div>

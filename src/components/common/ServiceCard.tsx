@@ -3,7 +3,29 @@
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import * as LucideIcons from "lucide-react";
+import { 
+    Activity, 
+    MessageSquare, 
+    Settings, 
+    Zap, 
+    Wrench, 
+    Music, 
+    Home, 
+    Repeat,
+    ArrowRight
+} from "lucide-react";
+
+const IconMap: Record<string, any> = {
+    Activity,
+    MessageSquare,
+    Settings,
+    Zap,
+    Wrench,
+    Music,
+    Home,
+    Repeat
+};
+
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import BookingModal from "@/components/ui/BookingModal";
@@ -18,7 +40,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ title, description, iconName, imageUrl, index }: ServiceCardProps) {
     const router = useRouter();
-    const Icon = (LucideIcons as any)[iconName] || LucideIcons.Activity;
+    const Icon = IconMap[iconName] || Activity;
     const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     return (
@@ -73,7 +95,7 @@ export default function ServiceCard({ title, description, iconName, imageUrl, in
                         }}
                     >
                         <span>Book Free Trial</span>
-                        <LucideIcons.ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
+                        <ArrowRight size={16} className="ml-2 transform group-hover/link:translate-x-1 transition-transform" />
                     </button>
                 </div>
             </div>
