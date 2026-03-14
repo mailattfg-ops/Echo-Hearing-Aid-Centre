@@ -41,15 +41,20 @@ export default function Footer() {
                         </div>
                         <ul className="space-y-3.5">
                             {[
-                                "Hearing Assessment",
-                                "Aid Fitting",
-                                "Repair & Service",
-                                "Custom Moulds",
-                                "Home Visit"
+                                { name: "Hearing Assessment", href: "/services#comprehensive-hearing-assessment" },
+                                { name: "Aid Fitting", href: "/services#hearing-aid-fitting-programming" },
+                                { name: "Repair & Service", href: "/services#hearing-aid-repair-servicing" },
+                                { name: "Custom Moulds", href: "/services#custom-ear-moulds-accessories" },
+                                { name: "Home Visit", href: "/services#home-visit-hearing-care" }
                             ].map((service) => (
-                                <li key={service} className="text-brand-dark/80 font-bold flex items-center group cursor-default text-sm">
-                                    <div className="w-1.5 h-1.5 rounded-sm bg-brand-dark/10 mr-3 rotate-45 group-hover:bg-brand-red group-hover:rotate-90 transition-all duration-500"></div>
-                                    <span>{service}</span>
+                                <li key={service.name}>
+                                    <Link
+                                        href={service.href}
+                                        className="text-brand-dark/80 hover:text-brand-red font-bold flex items-center group text-sm transition-colors"
+                                    >
+                                        <div className="w-1.5 h-1.5 rounded-sm bg-brand-dark/10 mr-3 rotate-45 group-hover:bg-brand-red group-hover:rotate-90 transition-all duration-500"></div>
+                                        <span>{service.name}</span>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -106,10 +111,15 @@ export default function Footer() {
                             </div>
                         </Link>
                         <div className="flex space-x-3 md:space-x-4">
-                            {[Instagram, Facebook, Youtube].map((Icon, idx) => (
+                            {[
+                                { Icon: Instagram, name: "Instagram" },
+                                { Icon: Facebook, name: "Facebook" },
+                                { Icon: Youtube, name: "Youtube" }
+                            ].map(({ Icon, name }, idx) => (
                                 <a
                                     key={idx}
                                     href="#"
+                                    aria-label={`Visit our ${name} page`}
                                     className="w-9 h-9 md:w-10 md:h-10 bg-white/10 backdrop-blur-lg rounded-xl flex items-center justify-center hover:bg-brand-dark hover:text-white transition-all duration-500 border border-white/20 text-brand-dark shadow-sm hover:shadow-brand-dark/20 hover:-translate-y-1"
                                 >
                                     <Icon className="w-4 h-4 md:w-[18px] md:h-[18px]" strokeWidth={2.5} />
@@ -127,10 +137,15 @@ export default function Footer() {
                             © {new Date().getFullYear()} {companyDetails.name}
                         </p>
                         <span className="hidden sm:inline-block text-brand-dark/20 text-[10px]">|</span>
-                        <span className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group cursor-pointer pt-2 sm:pt-0">
+                        <Link href="/privacy" className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group pt-2 sm:pt-0">
+                            Privacy Policy
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-dark/30 group-hover:w-full transition-all duration-500"></span>
+                        </Link>
+                        <span className="hidden sm:inline-block text-brand-dark/20 text-[10px]">|</span>
+                        <Link href="/terms" className="text-[10px] font-black uppercase tracking-widest text-brand-dark/50 hover:text-brand-dark transition-all duration-300 relative group pt-2 sm:pt-0">
                             Terms & Conditions
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-dark/30 group-hover:w-full transition-all duration-500"></span>
-                        </span>
+                        </Link>
                     </div>
 
                     {/* Designer Link */}

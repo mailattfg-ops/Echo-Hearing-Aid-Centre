@@ -17,7 +17,7 @@ export default function ServicesPageContent() {
             <PageHero
                 title="Our Services"
                 subtitle="Comprehensive hearing care solutions tailored to your lifestyle and needs."
-                backgroundImage="/Images/service_11zon.webp"
+                backgroundImage="/Images/our service.jpg"
             />
 
             {/* Services Grid */}
@@ -32,23 +32,28 @@ export default function ServicesPageContent() {
                     />
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5 xl:gap-6 2xl:gap-8 mt-8 md:mt-10 lg:mt-12">
                         {services.map((service, index) => (
-                            <ServiceCard
-                                key={index}
-                                index={index}
-                                title={service.title}
-                                description={service.description}
-                                iconName={service.icon}
-                                imageUrl={
-                                    index === 0 ? "/Images/hero-doctor-image.webp" :
-                                        index === 1 ? "/Images/service_consultation.webp" :
-                                            index === 2 ? "/Images/Fitting and Programming.webp" :
-                                                index === 3 ? "/Images/Invisible and Rechargeable.webp" :
-                                                    index === 4 ? "/Images/Repair and service.webp" :
-                                                        index === 5 ? "/Images/custome_ear.webp" :
-                                                            index === 6 ? "/Images/Home Visit.webp" :
-                                                                index === 7 ? "/Images/Follow-ups.webp" : undefined
-                                }
-                            />
+                            <div 
+                                key={index} 
+                                id={service.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}
+                                className="scroll-mt-24"
+                            >
+                                <ServiceCard
+                                    index={index}
+                                    title={service.title}
+                                    description={service.description}
+                                    iconName={service.icon}
+                                    imageUrl={
+                                        index === 0 ? "/Images/hero-doctor-image.webp" :
+                                            index === 1 ? "/Images/service_consultation.webp" :
+                                                index === 2 ? "/Images/Fitting and Programming.webp" :
+                                                    index === 3 ? "/Images/Invisible and Rechargeable.webp" :
+                                                        index === 4 ? "/Images/Repair and service.webp" :
+                                                            index === 5 ? "/Images/custome_ear.webp" :
+                                                                index === 6 ? "/Images/Home Visit.webp" :
+                                                                    index === 7 ? "/Images/Follow-ups.webp" : undefined
+                                    }
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

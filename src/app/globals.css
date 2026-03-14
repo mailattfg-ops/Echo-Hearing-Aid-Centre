@@ -29,3 +29,10 @@ body {
     background-image: radial-gradient(var(--tw-gradient-stops));
   }
 }
+
+/* Accessibility: Global Focus Styles */
+@layer base {
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-red ring-offset-2 transition-all;
+  }
+}

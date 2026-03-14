@@ -59,8 +59,9 @@ Requirement: ${formData.requirement}`;
         <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Full Name</label>
+                    <label htmlFor="name" className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Full Name</label>
                     <input
+                        id="name"
                         type="text"
                         name="name"
                         required
@@ -71,8 +72,9 @@ Requirement: ${formData.requirement}`;
                     />
                 </div>
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Phone Number</label>
+                    <label htmlFor="phone" className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Phone Number</label>
                     <input
+                        id="phone"
                         type="tel"
                         name="phone"
                         required
@@ -86,8 +88,9 @@ Requirement: ${formData.requirement}`;
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Location</label>
+                    <label htmlFor="location" className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Location</label>
                     <select
+                        id="location"
                         name="location"
                         required
                         value={formData.location}
@@ -102,8 +105,9 @@ Requirement: ${formData.requirement}`;
                     </select>
                 </div>
                 <div className="space-y-2">
-                    <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Service Required</label>
+                    <label htmlFor="service" className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Service Required</label>
                     <select
+                        id="service"
                         name="service"
                         required
                         value={formData.service}
@@ -121,8 +125,9 @@ Requirement: ${formData.requirement}`;
             </div>
 
             <div className="space-y-2">
-                <label className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Message</label>
+                <label htmlFor="requirement" className="text-xs font-black uppercase tracking-widest text-brand-dark/60 ml-1">Message</label>
                 <textarea
+                    id="requirement"
                     name="requirement"
                     rows={4}
                     required

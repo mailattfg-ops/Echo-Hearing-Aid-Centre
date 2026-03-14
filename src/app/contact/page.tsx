@@ -14,7 +14,7 @@ export default function ContactPage() {
             <PageHero
                 title="Contact Us"
                 subtitle="Expert care is just a message away. Reach out to our specialists today."
-                backgroundImage="/Images/contaxt_11zon.webp"
+                backgroundImage="/Images/about_11zon.webp"
             />
 
             <ContactSection />

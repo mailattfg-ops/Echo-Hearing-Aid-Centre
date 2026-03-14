@@ -86,6 +86,8 @@ export default function Roadmap() {
                             <div key={index} className="flex flex-col items-center">
                                 <button
                                     onClick={() => handleStepClick(index)}
+                                    aria-label={`View step ${index + 1}: ${step.title}`}
+                                    aria-current={isActive ? "step" : undefined}
                                     className={cn(
                                         "w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center transition-all duration-500 relative overflow-hidden",
                                         isActive
@@ -175,6 +177,7 @@ export default function Roadmap() {
                 <button
                     disabled={activeStep === 0}
                     onClick={() => setActiveStep(prev => prev - 1)}
+                    aria-label="Previous step"
                     className="p-3 rounded-full bg-white border border-gray-100 text-brand-red disabled:opacity-30"
                 >
                     <LucideIcons.ChevronLeft size={24} />
@@ -182,6 +185,7 @@ export default function Roadmap() {
                 <button
                     disabled={activeStep === steps.length - 1}
                     onClick={() => setActiveStep(prev => prev + 1)}
+                    aria-label="Next step"
                     className="p-3 rounded-full bg-white border border-gray-100 text-brand-red disabled:opacity-30"
                 >
                     <LucideIcons.ChevronRight size={24} />

@@ -22,7 +22,7 @@ export default function Navbar() {
                     className="bg-brand-red text-white py-0 px-6 md:px-10 flex items-center shadow-2xl relative z-20"
                 >
                     {/* Header Contents Group (Logo + Nav) */}
-                    <div className="flex items-center gap-10 lg:gap-16 flex-1">
+                    <div className="flex items-center gap-8 flex-1">
                         {/* Logo Section */}
                         <Link href="/" className="flex items-center shrink-0">
                             <Image
@@ -36,7 +36,7 @@ export default function Navbar() {
                         </Link>
 
                         {/* Desktop Nav Links */}
-                        <ul className="hidden lg:flex items-center gap-1">
+                        <ul className="hidden lg:flex items-center gap-2">
                             {navLinks.map((link) => {
                                 const isActive = pathname === link.href;
                                 return (
@@ -44,16 +44,16 @@ export default function Navbar() {
                                         <Link
                                             href={link.href}
                                             className={cn(
-                                                "relative w-[140px] py-3 font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center rounded-full group",
-                                                isActive ? "text-brand-red" : "text-white/70 hover:text-white"
+                                                "relative px-5 py-2.5 font-bold text-[12px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center rounded-full group min-w-[110px]",
+                                                isActive ? "text-brand-red" : "text-white/80 hover:text-white"
                                             )}
                                         >
                                             <span className="relative z-10">{link.name}</span>
                                             {isActive && (
                                                 <motion.div
                                                     layoutId="nav-pill"
-                                                    className="absolute inset-0 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.15)] z-0"
-                                                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                                                    className="absolute inset-0 bg-white rounded-full shadow-md z-0"
+                                                    transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                                                 />
                                             )}
                                         </Link>
@@ -72,14 +72,14 @@ export default function Navbar() {
                             <div className="bg-white rounded-full p-1 text-brand-red flex-shrink-0 flex items-center justify-center">
                                 <Phone size={12} fill="currentColor" />
                             </div>
-                            <span className="font-black text-[11px] uppercase tracking-[0.2em] hidden sm:inline">{companyDetails.whatsapp}</span>
+                            <span className="font-black text-[12px] uppercase tracking-[0.2em] hidden sm:inline">{companyDetails.whatsapp}</span>
                         </a>
 
                         {/* Mobile Menu Toggle */}
                         <button
                             className="lg:hidden p-2 text-white hover:bg-white/10 rounded-xl transition-colors"
                             onClick={() => setIsOpen(!isOpen)}
-                            aria-label="Toggle menu"
+                            aria-label={isOpen ? "Close menu" : "Open menu"}
                             aria-expanded={isOpen}
                         >
                             <AnimatedHamburger isOpen={isOpen} />
