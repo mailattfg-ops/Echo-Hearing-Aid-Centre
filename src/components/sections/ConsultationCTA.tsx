@@ -52,7 +52,7 @@ export default function ConsultationCTA() {
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto"
                     >
                         <Link
-                            href="/contact"
+                            href="/contact#contact"
                             className="group relative w-full sm:w-auto justify-center lg:px-10 lg:py-5 px-5 py-3 md:px-6 md:py-3 bg-white text-brand-dark rounded-full font-bold text-sm md:text-base lg:text-lg xl:text-xl shadow-2xl hover:bg-secondary hover:text-white transition-all duration-300 transform hover:-translate-y-1 flex items-center space-x-2 md:space-x-3"
                         >
                             <span className="whitespace-nowrap">Book Consultation</span>

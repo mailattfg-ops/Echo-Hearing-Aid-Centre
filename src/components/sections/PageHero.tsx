@@ -21,7 +21,7 @@ export default function PageHero({ title, subtitle, backgroundImage }: PageHeroP
                     alt={title}
                     fill
                     priority
-                    className="object-cover opacity-60"
+                    className="object-cover opacity-60 lg:object-[50%_25%]"
                 />
                 {/* Darkening Overlay for maximum visibility */}
                 <div className="absolute inset-0 bg-black/40 z-10" />

@@ -1,7 +1,7 @@
 export const companyDetails = {
   name: "Echo Hearing Aid Centre",
   tagline: "Where every sound matters",
-  locations: ["Kakkanad", "Aluva"],
+  locations: ["Aluva","Kakkanad"],
   whatsapp: "9061135961",
   email: "info@echohearing.com", // Placeholder as requested
   vision: "To be a trusted leader in hearing care, transforming lives by helping people reconnect with the sounds that matter through advanced technology, compassionate care, and personalized solutions.",

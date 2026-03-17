@@ -114,7 +114,7 @@ export default function FAQ() {
                 <div className="mt-6 lg:mt-8 xl:mt-10 text-center">
                     <p className="text-gray-500 font-medium text-xs lg:text-sm">
                         Didn't find what you're looking for?
-                        <Link href="/contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
+                        <Link href="/contact#contact" className="ml-2 text-brand-red font-black hover:underline tracking-tight">
                             Consult our experts directly
                         </Link>
                     </p>

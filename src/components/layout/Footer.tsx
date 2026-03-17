@@ -110,7 +110,7 @@ export default function Footer() {
                                 />
                             </div>
                         </Link>
-                        <div className="flex space-x-3 md:space-x-4">
+                        {/* <div className="flex space-x-3 md:space-x-4">
                             {[
                                 { Icon: Instagram, name: "Instagram" },
                                 { Icon: Facebook, name: "Facebook" },
@@ -125,7 +125,7 @@ export default function Footer() {
                                     <Icon className="w-4 h-4 md:w-[18px] md:h-[18px]" strokeWidth={2.5} />
                                 </a>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
