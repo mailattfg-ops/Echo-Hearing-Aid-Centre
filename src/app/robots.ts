@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://echohearing.com/sitemap.xml',
+    sitemap: 'https://www.echohearingaid.com/sitemap.xml',
   }
 }

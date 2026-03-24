@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         template: "%s | Echo Hearing Aid Centre"
     },
     description: "Echo Hearing Aid Centre offers expert hearing assessments, premium hearing aids, and personalized audiology solutions in Kakkanad and Aluva. Rediscover the joy of hearing with our certified experts.",
-    keywords: ["hearing aid centre", "audiology", "hearing test", "Kakkanad", "Aluva", "hearing aids Kerala", "invisible hearing aids", "rechargeable hearing aids"],
+    keywords: ["hearing aid centre", "audiology", "hearing test", "Kakkanad", "Aluva", "hearing aids Kerala", "invisible hearing aids", "rechargeable hearing aids", "hearing care Kochi", "ear test centre", "Echo Hearing Aid Centre"],
     authors: [{ name: "Echo Hearing Aid Centre" }],
     creator: "Echo Hearing Aid Centre",
     publisher: "Echo Hearing Aid Centre",
@@ -19,14 +19,14 @@ export const metadata: Metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://echohearing.com'),
+    metadataBase: new URL('https://www.echohearingaid.com'),
     alternates: {
         canonical: '/',
     },
     openGraph: {
         title: "Echo Hearing Aid Centre - Where every sound matters",
         description: "Expert hearing care and advanced audiology solutions in Kakkanad & Aluva.",
-        url: 'https://echohearing.com',
+        url: 'https://www.echohearingaid.com',
         siteName: 'Echo Hearing Aid Centre',
         locale: 'en_IN',
         type: 'website',
@@ -63,9 +63,9 @@ export default function RootLayout({
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Echo Hearing Aid Centre",
-        "image": "https://echohearing.com/Images/Navbar.png",
-        "@id": "https://echohearing.com",
-        "url": "https://echohearing.com",
+        "image": "https://www.echohearingaid.com/Images/Navbar.png",
+        "@id": "https://www.echohearingaid.com",
+        "url": "https://www.echohearingaid.com",
         "telephone": "+919061135961",
         "address": [
             {
