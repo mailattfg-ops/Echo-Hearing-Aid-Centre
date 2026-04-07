@@ -3,7 +3,7 @@ export const companyDetails = {
   tagline: "Where every sound matters",
   locations: ["Aluva","Kakkanad"],
   whatsapp: "9061135961",
-  email: "info@echohearingaid.com", // Updated to match new domain
+  email: "echohearingcentre@outlook.com",
   vision: "To be a trusted leader in hearing care, transforming lives by helping people reconnect with the sounds that matter through advanced technology, compassionate care, and personalized solutions.",
   mission: "Deliver precise hearing assessments using advanced audiology technology and provide personalized hearing solutions tailored to every lifestyle. Offer premium global hearing aid brands, expert fitting, continuous follow-ups, fine-tuning, and dependable servicing — ensuring accessible, comfortable, trusted hearing care.",
   about: "Echo Hearing Aid Centre improves lives through better hearing by combining advanced audiology technology, expert guidance, and compassionate care. We believe hearing is more than sound — it is connection, confidence, and quality of life. We provide comprehensive assessments, premium hearing aid fitting, and lifelong after-care.",
