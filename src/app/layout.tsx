@@ -66,7 +66,7 @@ export default function RootLayout({
         "image": "https://www.echohearingaid.com/Images/Navbar.png",
         "@id": "https://www.echohearingaid.com",
         "url": "https://www.echohearingaid.com",
-        "telephone": "+919061135961",
+        "telephone": "+919061186667",
         "address": [
             {
                 "@type": "PostalAddress",

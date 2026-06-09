@@ -2,7 +2,7 @@ export const companyDetails = {
   name: "Echo Hearing Aid Centre",
   tagline: "Where every sound matters",
   locations: ["Aluva","Kakkanad"],
-  whatsapp: "9061135961",
+  whatsapp: "9061186667",
   email: "echohearingcentre@outlook.com",
   vision: "To be a trusted leader in hearing care, transforming lives by helping people reconnect with the sounds that matter through advanced technology, compassionate care, and personalized solutions.",
   mission: "Deliver precise hearing assessments using advanced audiology technology and provide personalized hearing solutions tailored to every lifestyle. Offer premium global hearing aid brands, expert fitting, continuous follow-ups, fine-tuning, and dependable servicing — ensuring accessible, comfortable, trusted hearing care.",
