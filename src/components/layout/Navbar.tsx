@@ -66,13 +66,13 @@ export default function Navbar() {
                     {/* Phone Button & Mobile Toggle */}
                     <div className="flex items-center space-x-4 ml-auto">
                         <a
-                            href={`tel:${companyDetails.whatsapp}`}
+                            href={`tel:+91${companyDetails.whatsapp}`}
                             className="bg-white/20 hover:bg-white/30 backdrop-blur-md text-white px-6 py-2.5 rounded-full flex items-center space-x-2.5 transition-all border border-white/10"
                         >
                             <div className="bg-white rounded-full p-1 text-brand-red flex-shrink-0 flex items-center justify-center">
                                 <Phone size={12} fill="currentColor" />
                             </div>
-                            <span className="font-black text-[12px] uppercase tracking-[0.2em] hidden sm:inline">{companyDetails.whatsapp}</span>
+                            <span className="font-black text-[12px] uppercase tracking-[0.2em] hidden sm:inline">+91 {companyDetails.whatsapp}</span>
                         </a>
 
                         {/* Mobile Menu Toggle */}
@@ -116,12 +116,12 @@ export default function Navbar() {
                                     );
                                 })}
                                 <a
-                                    href={`tel:${companyDetails.whatsapp}`}
+                                    href={`tel:+91${companyDetails.whatsapp}`}
                                     className="bg-brand-red text-white px-4 py-4 rounded-2xl font-bold text-center flex items-center justify-center space-x-3"
                                     onClick={() => setIsOpen(false)}
                                 >
                                     <Phone size={20} fill="white" />
-                                    <span>Call {companyDetails.whatsapp}</span>
+                                    <span>Call +91 {companyDetails.whatsapp}</span>
                                 </a>
                             </nav>
                         </motion.div>

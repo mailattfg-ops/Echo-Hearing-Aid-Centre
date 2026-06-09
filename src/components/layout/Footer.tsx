@@ -76,13 +76,13 @@ export default function Footer() {
                                     <p className="text-xs font-black text-brand-dark leading-tight italic">{companyDetails.locations.join(" • ")}</p>
                                 </div>
                             </div>
-                            <a href={`tel:${companyDetails.whatsapp}`} className="flex items-center space-x-4 group hover:translate-x-1 transition-transform">
+                            <a href={`tel:+91${companyDetails.whatsapp}`} className="flex items-center space-x-4 group hover:translate-x-1 transition-transform">
                                 <div className="w-10 h-10 bg-brand-dark/5 rounded-xl flex items-center justify-center shrink-0 text-brand-dark">
                                     <Phone size={18} strokeWidth={2.5} />
                                 </div>
                                 <div className="space-y-0.5">
                                     <p className="text-[9px] font-black uppercase tracking-widest text-brand-dark/40">WhatsApp</p>
-                                    <p className="text-xs font-black text-brand-dark">{companyDetails.whatsapp}</p>
+                                    <p className="text-xs font-black text-brand-dark">+91 {companyDetails.whatsapp}</p>
                                 </div>
                             </a>
                             <a href={`mailto:${companyDetails.email}`} className="flex items-center space-x-4 group hover:translate-x-1 transition-transform">
