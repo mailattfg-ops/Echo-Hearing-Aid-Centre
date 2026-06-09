@@ -94,6 +94,24 @@ export default function Footer() {
                                     <p className="text-xs font-black text-brand-dark break-all">{companyDetails.email}</p>
                                 </div>
                             </a>
+                            <a href={companyDetails.socials.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group hover:translate-x-1 transition-transform">
+                                <div className="w-10 h-10 bg-brand-dark/5 rounded-xl flex items-center justify-center shrink-0 text-brand-dark">
+                                    <Instagram size={18} strokeWidth={2.5} />
+                                </div>
+                                <div className="space-y-0.5">
+                                    <p className="text-[9px] font-black uppercase tracking-widest text-brand-dark/40">Instagram</p>
+                                    <p className="text-xs font-black text-brand-dark">echohearingaid</p>
+                                </div>
+                            </a>
+                            <a href={companyDetails.socials.facebook} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 group hover:translate-x-1 transition-transform">
+                                <div className="w-10 h-10 bg-brand-dark/5 rounded-xl flex items-center justify-center shrink-0 text-brand-dark">
+                                    <Facebook size={18} strokeWidth={2.5} />
+                                </div>
+                                <div className="space-y-0.5">
+                                    <p className="text-[9px] font-black uppercase tracking-widest text-brand-dark/40">Facebook</p>
+                                    <p className="text-xs font-black text-brand-dark">Echo Hearing Aid Centre</p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 

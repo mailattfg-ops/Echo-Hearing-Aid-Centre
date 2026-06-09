@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { companyDetails } from "@/data/company";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -104,8 +105,8 @@ export default function RootLayout({
             "closes": "18:30"
         },
         "sameAs": [
-            "https://www.facebook.com/echohearing",
-            "https://www.instagram.com/echohearing"
+            companyDetails.socials.facebook,
+            companyDetails.socials.instagram
         ]
     };
 
