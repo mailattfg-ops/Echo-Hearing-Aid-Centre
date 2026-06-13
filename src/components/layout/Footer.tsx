@@ -169,13 +169,13 @@ export default function Footer() {
                     {/* Designer Link */}
                     <div className="order-3 md:order-2 flex justify-center md:justify-end">
                         <a
-                            href="https://thinkforgeglobal.com/"
+                            href="https://www.thinkforgeglobal.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-[9px] font-bold text-brand-dark/30 hover:text-brand-red transition-colors flex flex-col md:flex-row items-center group text-center"
+                            className="text-[10px] font-extrabold text-brand-dark/50 hover:text-brand-red transition-colors flex flex-col md:flex-row items-center group text-center"
                         >
-                            <span className="uppercase tracking-[0.3em] mb-1 md:mb-0">Designed & Developed by</span>
-                            <span className="md:ml-2 text-brand-dark/60 font-black group-hover:text-brand-red transition-colors">THINK FORGE GLOBAL</span>
+                            <span className="uppercase tracking-[0.25em] mb-1 md:mb-0">Designed & Developed by</span>
+                            <span className="md:ml-2 text-brand-dark font-black group-hover:text-brand-red transition-colors tracking-[0.15em]">THINK FORGE GLOBAL</span>
                         </a>
                     </div>
                 </div>
